@@ -1,2 +1,2 @@
-# ejercicios-de-programacion
-Ejercicios de la asignatura de programación de 1º de DAM.
+# Ejercicios de 1º de DAM, Programación.
+Ejercicios de programación de en Java que iremos haciendo durante el curso.
