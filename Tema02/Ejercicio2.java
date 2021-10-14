@@ -1,5 +1,5 @@
 /**
- * Ejercicio 1
+ * Ejercicio 2
  *
  * @author Alberto Parra Toval
  */
