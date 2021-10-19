@@ -20,7 +20,7 @@ public static void main(String[] args) {
 	int total;
 	total = (segundoNumero * primerNumero);
 	
-	System.out.print("La multiplicación de estos dos números son " + total);
+	System.out.print("La multiplicación de estos dos números es " + total);
 	
 }
 }

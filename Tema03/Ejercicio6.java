@@ -1,5 +1,5 @@
 /**
-* 
+* Escribe un programa que calcule el área de un triángulo.
 *
 * @author Alberto Parra 
 */
