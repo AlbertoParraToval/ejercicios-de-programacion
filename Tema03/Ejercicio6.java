@@ -13,10 +13,10 @@ public static void main(String[] args) {
 	System.out.print("Introduce la altura del rectángulo en cm:");
 	int altura = Integer.parseInt(System.console().readLine() );
 	
-	double resultado1 = ((base * altura)/2);
+	double resultado = ((base * altura)/2);
 	 
 	
-	System.out.print("El área del rectángulo es " + resultado1 + " cm");
+	System.out.print("El área del rectángulo es " + resultado + " cm");
 
 
  }

@@ -16,6 +16,5 @@ public static void main(String[] args) {
 	double resultado = (base * altura); 
 	
 	System.out.print("El área del rectángulo es " + resultado + " cm");
-
  }
 }
