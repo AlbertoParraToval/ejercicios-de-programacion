@@ -22,6 +22,6 @@ public static void main(String[] args) {
 	
 	System.out.print("La multiplicación de estos dos números es " + total);
 	
-}
+  }
 }
 
