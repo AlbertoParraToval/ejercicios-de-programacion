@@ -6,21 +6,12 @@
 */
 public class Ejercicio7 {
 public static void main(String[] args) {
-	System.out.println("Este programa calcula la factura total");
-	
-	System.out.println("Introduce el primer pedido");
-	int pedido1 = Integer.parseInt(System.console().readLine() );
-	
-	System.out.println("Introduce el segundo pedido");
-	int pedido2 = Integer.parseInt(System.console().readLine() );
-	
-	System.out.println("Introduce el tercero pedido");
-	int pedido3 = Integer.parseInt(System.console().readLine() );
-	
-	System.out.println("Introduce el cuarto pedido");
-	int pedido4 = Integer.parseInt(System.console().readLine() );
-	
-	double pedidoTotal = (pedido1 + pedido2 + pedido3 + pedido4);
-	System.out.println("La factura total será de " + pedidoTotal + "euros.");
+	System.out.print("Por favor, introduzca la base imponible (precio del artículo sin IVA): ");
+    double baseImponible = Double.parseDouble(System.console().readLine());
+
+    System.out.printf("Base imponible %8.2f\n", baseImponible);
+    System.out.printf("IVA            %8.2f\n", (baseImponible * 0.21));
+    System.out.printf("-----------------------\n");
+    System.out.printf("Total          %8.2f\n", (baseImponible * 1.21));
  }
 }
