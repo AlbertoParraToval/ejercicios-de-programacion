@@ -17,10 +17,10 @@ public static void main(String[] args) {
 	int segundoNumero;
 	segundoNumero = Integer.parseInt( linea );
 
-	int total;
-	total = (segundoNumero * primerNumero);
+	int multiplicacion;
+	multiplicacion = (segundoNumero * primerNumero);
 	
-	System.out.print("La multiplicación de estos dos números es " + total);
+	System.out.print("La multiplicación de estos dos números es " + multiplicacion);
 	
   }
 }
