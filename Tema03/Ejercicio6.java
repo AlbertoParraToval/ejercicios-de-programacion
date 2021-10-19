@@ -17,7 +17,5 @@ public static void main(String[] args) {
 	 
 	
 	System.out.print("El área del rectángulo es " + resultado + " cm");
-
-
  }
 }

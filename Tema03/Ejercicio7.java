@@ -22,7 +22,5 @@ public static void main(String[] args) {
 	
 	double pedidoTotal = (pedido1 + pedido2 + pedido3 + pedido4);
 	System.out.println("La factura total será de " + pedidoTotal + "euros.");
-	
-	
  }
 }
