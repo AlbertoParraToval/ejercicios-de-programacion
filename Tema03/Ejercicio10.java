@@ -7,7 +7,7 @@ public class Ejercicio10 {
 public static void main(String[] args) {
 	System.out.println("Este programa convierte de kb a Mb.");
 	//Introducir el valor a convertir
-	System.out.print("Introduce el valor en kb");
+	System.out.print("Introduce el valor en Mb: ");
     int Mb = Integer.parseInt(System.console().readLine() );;
     double Conversion = 1000;
     
