@@ -18,7 +18,7 @@
 */
 public class Ejercicio12 {
 public static void main(String[] args) {
-	System.out.println("Ejemplo 1");
+	System.out.println("Problemas");
 	
 	//Introducimos la nota del primer examen
 	System.out.print("Introduce la nota del primer examen: ");
