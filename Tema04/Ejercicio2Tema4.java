@@ -11,7 +11,7 @@ public class Ejercicio2Tema4 {
     System.out.print("Por favor, introduzca la hora que desee: ");
 	int hora = Integer.parseInt(System.console().readLine());
 	String tramoDeHora;
-	
+	//Utilizamos el if para concretar los tramos de hora con <> y &&
 	if ((hora > 6) && (hora < 12)) {
       System.out.println("Buenos días");
     } else if ((hora > 13) && (hora < 20)) {
