@@ -63,7 +63,7 @@ public class Ejercicio10Tema4 {
         if (dia < 22) {
           horoscopo = "cáncer";
         } else {
-          horoscopo = "Leo";
+          horoscopo = "leo";
         }
         break;
       case 8:
