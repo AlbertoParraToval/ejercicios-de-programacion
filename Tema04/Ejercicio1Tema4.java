@@ -9,42 +9,42 @@ public class Ejercicio1Tema4 {
     
     System.out.print("Por favor, introduzca un numero de la semana: ");
 	int dia = Integer.parseInt(System.console().readLine());
-	String nombreDelDia;
+	String numeroDelDia;
 	
 	switch (dia) {
 		case 1:
-		nombreDelDia = "Lunes";		
+		numeroDelDia = "Programación";		
 		break;
 		
 		case 2:
-		nombreDelDia = "Martes";		
+		numeroDelDia = "Programación";		
 		break;
 		
 		case 3:
-		nombreDelDia = "Miércoles";		
+		numeroDelDia = "Sistemas Informáticos";		
 		break;
 		
 		case 4:
-		nombreDelDia = "Jueves";		
+		numeroDelDia = "Programación";		
 		break;
 		
 		case 5:
-		nombreDelDia = "Viernes";		
+		numeroDelDia = "Sistemas Informáticos";		
 		break;
 		
 		case 6:
-		nombreDelDia = "Sábado";		
+		numeroDelDia = "Nada";		
 		break;
 		
 		case 7:
-		nombreDelDia = "Domingo";		
+		numeroDelDia = "Nada";		
 		break;
 		
 		default :
-		nombreDelDia = "No existe ese día";		
+		numeroDelDia = "No existe ese día";		
 		break;		
 		}
     
-    System.out.println("Día " + dia + ": " + nombreDelDia);    
+    System.out.println("Día " + dia + ": " + numeroDelDia);    
   }
 }
