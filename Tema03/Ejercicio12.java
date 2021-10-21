@@ -30,7 +30,6 @@ public static void main(String[] args) {
     
 	//La factorización del examen1 con la notaFinal deseada.
 	double examen2 = ((notaFinal * 100) - (examen1 * 40)) / 60;
-    
     System.out.println("Para poder tener un " + notaFinal + " en el trimestre, necesitas sacar al menos  " + examen2 + " en el segundo examen.");	    
  }
 }
