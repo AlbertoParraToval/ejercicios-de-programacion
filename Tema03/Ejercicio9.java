@@ -7,8 +7,8 @@
 * @author Alberto Parra 
 */
 public class Ejercicio9 {
-public static void main(String[] args) {
-	System.out.print("Este programa calcula el volumen de un cono");
+public static void main(String[] args) {		
+	//Calcular el volumen de un cono.
 	double numeroPi;
 	numeroPi = 3.1416;
 	//Valor del radio
@@ -16,7 +16,7 @@ public static void main(String[] args) {
 	int radio = Integer.parseInt(System.console().readLine() );
 	//Valor de la altura
 	System.out.println("Introduce la altura del cono en cm:");
-	int altura = Integer.parseInt(System.console().readLine() );
+	int altura = Integer.parseInt(System.console().readLine());
 	//Realizamos las operaciones
 	double resultado1 = (radio * radio);
 	double resultado2 = (resultado1 * numeroPi);
