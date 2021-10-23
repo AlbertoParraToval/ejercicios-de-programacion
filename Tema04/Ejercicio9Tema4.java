@@ -24,36 +24,7 @@ public class Ejercicio9Tema4 {
     double c = Double.parseDouble(System.console().readLine());
    
     
-    if ((x == 0) && (y == 0) && (c == 0)) {
-      System.out.println("La ecuación tiene infinitas soluciones.");
-    }
-   
     
-    if ((x == 0) && (y == 0) && (c != 0)) {
-      System.out.println("La ecuación no tiene solución.");
-    }
-      
-   
-    if ((x != 0) && (y != 0) && (c == 0)) {
-      System.out.println("x1 = 0");
-      System.out.println("x2 = " + (-y / x));
-    }
-    
-    
-    if ((x == 0) && (y != 0) && (c != 0)) {
-      System.out.println("x1 = x2 = " + (-c / y));
-    }
-
-    
-    if ((x != 0) && (y != 0) && (c != 0)) {
-        
-      double discriminante = y*y - (4 * x * c);
-      
-      if (discriminante < 0) {
-          System.out.println("La ecuación no tiene soluciones reales");
-      }  else {
-        System.out.println("x1 = " + (-y + Math.sqrt(discriminante))/(2 * x));
-        System.out.println("x2 = " + (-y - Math.sqrt(discriminante))/(2 * x));
       }
     }
   }
