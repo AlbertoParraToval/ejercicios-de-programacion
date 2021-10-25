@@ -1,5 +1,5 @@
 /**
-* Realiza un programa que calcule la media de tres notas
+* Realiza un programa que calcule la media de tres notas.
 *
 * @author Alberto Parra 
 */
