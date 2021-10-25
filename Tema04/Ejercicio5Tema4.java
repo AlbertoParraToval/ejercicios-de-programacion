@@ -1,5 +1,5 @@
 /**
-* 	Realiza un programa que resuelva una ecuación de primer grado (del tipo ax+b = 0).
+* 	Realiza un programa que resuelva una ecuación de primer grado (del tipo ax+b = 0)
 *
 * @author Alberto Parra 
 */
