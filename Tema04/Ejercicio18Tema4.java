@@ -1,6 +1,5 @@
 /**
-* 	Escribe un programa que diga cuál es la última cifra de un número entero
-	introducido por teclado.
+* 	Escribe un programa que diga cuál es la última cifra de un número entero introducido por teclado.
 * @author Alberto Parra 
 */
 public class Ejercicio18Tema4 {
