@@ -1,6 +1,5 @@
 /**
-* 	Realiza un programa que diga si un número introducido por teclado es par y/o
-	divisible entre 5.
+* 	Realiza un programa que diga si un número introducido por teclado es par y/o divisible entre 5.
 *
 * @author Alberto Parra 
 */
