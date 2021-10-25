@@ -5,7 +5,6 @@ una altura h. Aplica la fórmula t =
 g                    
 siendo g = 9.81m/s
 2
-*
 * @author Alberto Parra 
 */
 public class Ejercicio6Tema4 {
