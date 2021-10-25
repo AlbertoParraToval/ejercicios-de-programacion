@@ -104,7 +104,7 @@ public class Ejercicio16Tema4 {
 		if (respuesta.equals("a")) {
 		puntos++;
 		}
-		
+		//Multiplicamos los resultados del cuestionario por 3 para que el máximo de puntos sea 30
 		int puntuacion = puntos * 3;
 		if ((puntuacion >= 0) && (puntuacion <= 10)) {
 		System.out.println("El resultado es de " + puntuacion + "\n¡Enhorabuena! tu pareja parece ser totalmente fiel.");
