@@ -4,7 +4,6 @@
 	con verdadero o falso. Cada pregunta contestada como verdadero sumará 3
 	puntos. Las preguntas contestadas con falso no suman puntos. A continuación
 	se listan las preguntas del test.
-
 *
 * @author Alberto Parra 
 */
