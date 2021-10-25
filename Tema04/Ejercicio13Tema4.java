@@ -1,5 +1,5 @@
 /**
-* 	Escribe un programa que ordene tres números enteros introducidos por teclado.
+* 	Escribe un programa que ordene tres números enteros introducidos por teclado
 *
 * @author Alberto Parra 
 */
