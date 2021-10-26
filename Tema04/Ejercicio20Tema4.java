@@ -8,8 +8,7 @@ public class Ejercicio20Tema4 {
 		
 		System.out.print("Introduce el número cuya primera cifra quiera saber:\n ");
 		int numero = Integer.parseInt(System.console().readLine());
-		int ultimoDigito = numero%10;
-		int primerNumero = numero;
+
 		//Si es mayor de 5 no se cuenta
 		if (numero > 99999) {
 			System.out.printf("No se pueden los números de más de 5 cifras.");
