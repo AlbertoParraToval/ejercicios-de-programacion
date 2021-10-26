@@ -7,8 +7,6 @@ public class Ejercicio9Tema4 {
 
   public static void main(String[] args) {
     
-    double x1, x2;
-
     System.out.println("Este programa resuelve ecuaciones de segundo grado.");
     System.out.println("ax^2 + bx + c = 0");
     

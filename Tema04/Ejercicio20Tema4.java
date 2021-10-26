@@ -27,7 +27,7 @@ public class Ejercicio20Tema4 {
 			System.out.printf("La primera cifra es " + (numero / 100));
 			}
 			//Si el numero tiene 2 cifras
-		if ((numero <= 99) && (numero >= 10) && ) {
+		if ((numero <= 99) && (numero >= 10) ) {
 			System.out.printf("La primera cifra es " + (numero / 10));
 			}
 			//Si el numero tiene 1 cifra
