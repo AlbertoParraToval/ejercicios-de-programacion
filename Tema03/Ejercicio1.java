@@ -1,7 +1,6 @@
 /**
-* Escribe un programa en el que se declaren las variables enteras x e y. Asígnales
-los valores 144 y 999 respectivamente. A continuación, muestra por pantalla
-el valor de cada variable, la suma, la resta, la división y la multiplicación.
+* 	Realiza un programa que pida dos números y que luego muestre el resultado
+	de su multiplicación.
 *
 * @author Alberto Parra 
 */
@@ -22,7 +21,6 @@ public static void main(String[] args) {
 	multiplicacion = (segundoNumero * primerNumero);
 	
 	System.out.print("La multiplicación de estos dos números es " + multiplicacion);
-	
   }
 }
 
