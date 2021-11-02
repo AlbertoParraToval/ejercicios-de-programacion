@@ -1,6 +1,7 @@
 /**
 *Realiza un conversor de Mb a Kb.
 *
+*
 * @author Alberto Parra 
 */
 public class Ejercicio10 {
