@@ -1,14 +1,14 @@
-
-
-
-
-
-
+/*Implementa el juego piedra, papel y tijera. Primero, el usuario 1 introduce
+su jugada y luego el usuario 2. Si alguno de los usuarios introduce una opción
+incorrecta, el programa deberá mostrar un mensaje de error.
+*/
+import java.util.Scanner;
 
 public class Ejercicio28Tema4 {
 
   public static void main(String[] args) {
-    String jugada1;
+    Scanner s = new Scanner(System.in);
+    
     System.out.print("Turno del jugador 1 (introduzca piedra, papel o tijera): ");
     String jugada1 = s.nextLine();
     
@@ -42,3 +42,4 @@ public class Ejercicio28Tema4 {
   }
   
 }
+
