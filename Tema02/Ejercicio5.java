@@ -1,5 +1,5 @@
 /**
- * Ejercicio 5
+ * De pesetas a euros.
  *
  * @author Alberto Parra Toval
  */
