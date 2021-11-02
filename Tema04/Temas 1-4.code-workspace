@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Tema03"
+		},
+		{
+			"path": "../Tema02"
+		},
+		{
+			"path": "../Tema01"
+		}
+	],
+	"settings": {
+		"java.project.sourcePaths": []
+	}
+}
