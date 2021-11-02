@@ -14,6 +14,7 @@
 *      ¿Qué nota quieres sacar en el trimestre? 7
 *      Para tener un 7 en el trimestre necesitas sacar un 6.33 en el segundo examen. 
 *
+*
 * @author Alberto Parra 
 */
 public class Ejercicio12 {
