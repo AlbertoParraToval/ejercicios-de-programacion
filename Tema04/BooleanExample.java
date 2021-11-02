@@ -1,5 +1,3 @@
-import javax.sound.sampled.SourceDataLine;
-
 /*Ejemplo de Boolean 
 */
 public class BooleanExample {
@@ -12,15 +10,15 @@ public class BooleanExample {
         
     if (repiteAsignatura){
         System.out.println("Tienes que hacer ejercicios de recuperación.");
-    } else {
+    }
+    if (!repiteAsignatura){
         System.out.println("No tienes que hacer ejercicios de recuperación.");
     }
-
-
-
-
-
-  }
+    int numero = 6;
+    if (!(numero < 0)) {
+        
+    }
+ }  
 }
 
 
