@@ -1,8 +1,5 @@
 /**
-* Escribe un programa que calcule el volumen de un cono según la fórmula V =
-1
-3
-πr2h
+* Escribe un programa que calcule el volumen de un cono según la fórmula V = 1 3 πr2h
 *
 * @author Alberto Parra 
 */
