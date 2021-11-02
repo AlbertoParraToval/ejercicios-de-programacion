@@ -1,5 +1,5 @@
 /**
- * Ejercicio 4
+ * Pasar de euros a pesetas.
  *
  * @author Alberto Parra Toval
  */
