@@ -10,7 +10,7 @@ public class Ejercicio3 {
     miNombre = "Alberto Parra Toval";
     
     String miDireccion;
-    miDireccion = "Alberto Parra Toval";
+    miDireccion = "Avenida Imperio Argentina nº7";
     
     String miTelefono;
     miTelefono = "665879313";
