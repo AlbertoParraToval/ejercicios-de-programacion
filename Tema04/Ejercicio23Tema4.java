@@ -7,11 +7,8 @@
   respectivamente que no se aplica promoción, el precio se reduce a la mitad,
   se descuentan 5 euros o se descuenta el 5%. El ejercicio se da por bueno si se
   muestran los valores correctos, aunque los números no estén tabulados.
-
 * @author Alberto Parra 
 */
-
-		
 public class Ejercicio23Tema4 {
   public static void main (String[] args) {
      String line;
