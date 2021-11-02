@@ -2,6 +2,7 @@
 * Escribe un programa que calcule el total de una factura a partir de la base
   imponible.
 *
+*
 * @author Alberto Parra 
 */
 public class Ejercicio7 {
