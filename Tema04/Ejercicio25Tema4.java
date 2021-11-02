@@ -37,7 +37,5 @@ public class Ejercicio25Tema4 {
       System.out.printf("Gastos envío: %14.2f€\n", precioDeEnvio);
       System.out.printf("Total: %22.2f€\n", precioFinal);
 		}
-    
-
   }
 }
