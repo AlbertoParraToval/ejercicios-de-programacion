@@ -15,18 +15,20 @@ import java.util.Scanner;
 public class Ejercicio264Tema4 {
   public static void main(String[] args) {
     Scanner s = new Scanner(System.in);
-
+    
     System.out.println("Venta de entradas CineCampa");
-
+    //Preguntamos el número de entradas
     System.out.print("Número de entradas: ");
     int entradas = Integer.parseInt(s.nextLine());
-
+    //Preguntamos el dia de la semana
     System.out.print("Día de la semana: ");
     String dia = s.nextLine();
-
+    //Tiene tarjeta mediante una boolean
     System.out.print("¿Tiene tarjeta CineCampa? (s/n): ");
     boolean tieneTarjeta = (s.nextLine()).equals("s");
+    
 
+    //Definimos las variables entradasIndividuales, entradasDePareja y total, descuento y aPagar
     int entradasIndividuales = entradas;
     double precioEntradaIndividual = 8;
     int entradasDePareja = 0;
@@ -34,6 +36,7 @@ public class Ejercicio264Tema4 {
     double descuento = 0;
     double aPagar = 0;
 
+    //Usamos un switch para saber que dia vamos y si cae en algun dia que haya descuento 
     switch (dia) {
       case "miércoles":
       case "miercoles":
@@ -44,18 +47,21 @@ public class Ejercicio264Tema4 {
       default:
     }
 
-    
+    //la variable total = precioEntradaIndividual * entradasIndividuales
     total = precioEntradaIndividual * entradasIndividuales;
+    //varible total = 11 * entradasPareja
     total += 11 * entradasDePareja;
     
+    //Un if para saber si tiene tarjeta o no
     if(tieneTarjeta) {
       descuento = total * 0.1;
     }
-
+    //La operacion del descuento
     aPagar = total - descuento;
 
     System.out.println("\nAquí tiene sus entradas. Gracias por su compra.");
 
+    //Se muestra el desgolaso final
     if (entradasDePareja > 0) {
       System.out.printf("Entradas de pareja            %2d\n", entradasDePareja);
       System.out.printf("Precio por entrada de pareja  %5.2f €\n", 11.0);
