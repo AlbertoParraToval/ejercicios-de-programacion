@@ -16,20 +16,26 @@
 
 public class Ejercicio24Tema4 {
 	public static void main(String[] args) {
-		System.out.println("1 - Programador junior");
+		
+    //Preguntamos al usuario que tipo de empleado le corresponde.
+    System.out.println("1 - Programador junior");
 		System.out.println("2 - Prog. senior");
 		System.out.println("3 - Jefe de proyecto");
 		System.out.print("Introduzca el cargo del empleado (1 - 3): ");
 		int cargo = Integer.parseInt(System.console().readLine());
 		
+    //Preguntamos cuantos dias ha estado de viaje mediante un int.
 		System.out.print("¿Cuántos días ha estado de viaje visitando clientes? ");
     int diasVisita = Integer.parseInt(System.console().readLine());
 
+    //Preguntamos su estado y almacenamos la variable int
     System.out.print("Introduzca su estado civil (1 - Soltero, 2 - Casado): ");
     int estadoCivil = Integer.parseInt(System.console().readLine());
 
+    //Creamos la variable sueldoBase para almacenar los tres tipos de sueldo.
     double sueldoBase = 0;
 
+    //Las distintas opciones de la double sueldoBase mediante un switch
     switch(cargo) {
       case 1: // Programador junior
         sueldoBase = 950;
@@ -44,12 +50,16 @@ public class Ejercicio24Tema4 {
         System.out.println("No ha elegido correctamente el sueldo base.");
     }
 
+    //sueldoDiestas corresponde al numero de visitas * 30 que son los euros extra
     double sueldoDietas = diasVisita * 30;
 
+    //sueldoBruto es el resultado de sumar el sueldo base con el de dietas
     double sueldoBruto = sueldoBase + sueldoDietas;
 
+    //Nombramos la variable irpf 
     double irpf = 0;
 
+    //Nos apoyamos de un if para determinar los dos tipos de irpf
     if (estadoCivil == 1) { // Está soltero 
       irpf = 25;
     } else if (estadoCivil == 2) { // Estás casado
@@ -58,6 +68,7 @@ public class Ejercicio24Tema4 {
       System.out.println(".");
     }
     
+    //Nombramos la cuantiairfp 
     double cuantiaIrpf = (sueldoBruto * irpf) / 100;
 
     // Mostramos la tabla y el resultado final de nuestra nómina
