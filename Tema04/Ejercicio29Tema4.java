@@ -7,7 +7,7 @@
     café a 1’50 y 1’20 respectivamente.
 */
 public class Ejercicio29Tema4 {
-    public static void main(String[] args) 
+    public static void main(String[] args) {
       System.out.print("¿Qué desea comer? (palmera donut o pitufo): ");
       String comida = System.console().readLine();
   
@@ -66,5 +66,5 @@ public class Ejercicio29Tema4 {
         double precioTotal = precioComida + precioBebida;
   
         System.out.printf("\nTotal: %.2f€\n", precioTotal);
-      }
-    }
+   }
+}
