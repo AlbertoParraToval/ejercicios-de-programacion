@@ -17,6 +17,7 @@ public class Ejercicio25Tema4 {
     System.out.print("\n¿Quiere el escudo bordado? (s/n): ");
     String bordado = System.console().readLine();
 
+    
     //Si ancho <0 || ancho < 0.... no se puede
     //Sino que se ejecute el desglose
     if( alto < 0 || ancho < 0 || bordado.equals("s") && bordado.equals("n")){
