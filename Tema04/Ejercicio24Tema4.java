@@ -16,7 +16,6 @@
 
 public class Ejercicio24Tema4 {
 	public static void main(String[] args) {
-		
     //Preguntamos al usuario que tipo de empleado le corresponde.
     System.out.println("1 - Programador junior");
 		System.out.println("2 - Prog. senior");
