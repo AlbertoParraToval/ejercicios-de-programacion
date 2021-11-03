@@ -10,79 +10,64 @@
  * 
  * 
  * */
-public class Ejercicio26Tema4 {
-	System.out.print("Por favor, dinos cuantas personas sois: ");
-    int personas = Integer.parseInt(System.console().readLine());
+import java.util.Scanner;
 
-    System.out.print("Por favor, dinos que dia de la semana deseas ir: (1-7):");
-    int dia = Integer.parseInt(System.console().readLine());
+public class Ejercicio264Tema4 {
+  public static void main(String[] args) {
+    Scanner s = new Scanner(System.in);
 
-    System.out.print("¿Tienes la tarjeta de CineCam? (s/n):");
-    String carnetSocio = System.console().readLine();
+    System.out.println("Venta de entradas CineCampa");
 
-    double precio = 0;
-    double precioPareja = 0;
+    System.out.print("Número de entradas: ");
+    int entradas = Integer.parseInt(s.nextLine());
+
+    System.out.print("Día de la semana: ");
+    String dia = s.nextLine();
+
+    System.out.print("¿Tiene tarjeta CineCampa? (s/n): ");
+    boolean tieneTarjeta = (s.nextLine()).equals("s");
+
+    int entradasIndividuales = entradas;
+    double precioEntradaIndividual = 8;
+    int entradasDePareja = 0;
     double total = 0;
     double descuento = 0;
+    double aPagar = 0;
 
-    if(dia > 0 && dia < 8 && personas > 0 && carnetSocio.equals("s") || carnetSocio.equals("n")){
-
-      System.out.println("Aquí están sus entradas. Gracias por su compra");
-
-        switch(dia){
-          
-        case 1:
-        case 2:
-        case 5:
-        case 6:
-        case 7:
-          precio = 8 * personas;
-          break;
-
-          case 3:
-          precio = 5 * personas;
-          break;
-          
-        case 4:
-        if(personas % 2 == 0){
-          precio = (personas / 2) * 11;
-          System.out.printf("Entradas parejas: %24d\n", personas/2);
-          System.out.printf("Precio por entrada pareja %20.2f€\n", precio);
-          personas = 0;
-        } else {
-          precioPareja = (personas - 1 / 2) * 11;
-          precio =  + 8;
-          System.out.printf("Entradas parejas: %8d\n", (personas-1)/2);
-          System.out.printf("Precio por entrada pareja %20.2f€\n", precioPareja);
-          personas = 1;
-        }
-        break;
-        
-        default:
-        System.out.println("has introducido mal el dia de la semana, por favor, que esté entre el 1 y el 7\n");        
-        
-      }
-
-      System.out.printf("Entradas individuales %20d\n", personas);
-      
-      if(personas > 0){
-        System.out.printf("Precio entradas individuales %17.2f€\n", precio);
-      } else{
-        System.out.printf("Precio entradas individuales %16.2f€\n", precio * 0);
-      }
-
-      System.out.printf("Total %40.2f€\n", precio + precioPareja);
-      
-      if(carnetSocio.equals("s")){
-        precio -= precio * 0.1;
-        descuento = (precio + precioPareja) * 0.1;
-        System.out.printf("Descuento %35.2f€\n", descuento);
-      }
-      total = precio + precioPareja - descuento;
-      System.out.printf("A pagar %38.2f€\n", total - descuento);
-    
-    } else{
-      System.out.println("Lo siento, pero algún dato se ha introducido de manera incorrecta\n");
+    switch (dia) {
+      case "miércoles":
+      case "miercoles":
+        precioEntradaIndividual = 5;
+      case "jueves":
+        entradasDePareja = entradas / 2;
+        entradasIndividuales = entradas % 2;
+      default:
     }
+
+    
+    total = precioEntradaIndividual * entradasIndividuales;
+    total += 11 * entradasDePareja;
+    
+    if(tieneTarjeta) {
+      descuento = total * 0.1;
+    }
+
+    aPagar = total - descuento;
+
+    System.out.println("\nAquí tiene sus entradas. Gracias por su compra.");
+
+    if (entradasDePareja > 0) {
+      System.out.printf("Entradas de pareja            %2d\n", entradasDePareja);
+      System.out.printf("Precio por entrada de pareja  %5.2f €\n", 11.0);
+    }
+
+    if (entradasIndividuales > 0) {
+      System.out.printf("Entradas individuales         %2d\n", entradasIndividuales);
+      System.out.printf("Precio por entrada individual %5.2f €\n", precioEntradaIndividual);
+    }
+
+    System.out.printf("Total                         %5.2f €\n", total);
+    System.out.printf("Descuento                     %5.2f €\n", descuento);
+    System.out.printf("A pagar                       %5.2f €\n", aPagar);
   }
 }
