@@ -5,13 +5,13 @@
  */
 public class Ejercicio3Tema5 {
     public static void main(String[] args) {
-        int suma;
         int n = 0;
-        while (n < 101) { 
-            suma += 5;
+        do { 
+        n += 5;
         System.out.println("n: " + n);
         System.out.println("--------");
-        }
+        } while (n < 101);
+
         //Se ejecuta una vez fuera de la condición impuesta por el bucle
         System.out.println("Fin");
     }
