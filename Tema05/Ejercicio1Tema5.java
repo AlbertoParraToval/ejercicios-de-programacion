@@ -12,11 +12,4 @@ public class Ejercicio1Tema5 {
       //Se ejecuta una vez fuera de la condición impuesta por el bucle
       System.out.println("Fin");
     }
-  }
-
-  //Opción 2
-  //for(int n = 0; n <= 20; n++){
-    //if (n % 5 == 0){
-      //System.out.println(n);
-    //}
-  //}
+}
