@@ -3,12 +3,11 @@
  *
  * @author Alberto Parra Toval
  */
-public class Ejercicio1Tema5 {
+public class Ejercicio2Tema5 {
     public static void main(String[] args) {
-        int incremento;
         int n = 0;
         while (n < 101) {  
-        incremento += 5;
+        n += 5;
         System.out.println("n: " + n);
         System.out.println("--------");
         }
