@@ -9,6 +9,8 @@
  */
 public class Ejercicio7Tema5 {
     public static void main(String[] args) {
+      System.out.println("Ejercicio Caja Fuerte");
+      System.out.println("Para abrir la caja fuerte dispone de 4 intentos, suerte.");
       System.out.println("Introduce la contraseña: ");
       int contraseña = Integer.parseInt(System.console().readLine());      
       int codigo = 1234;
@@ -16,13 +18,13 @@ public class Ejercicio7Tema5 {
       do {
           if (contraseña == codigo) {
               System.out.println("La caja fuerte se ha abierto satisfactoriamente");
-              intentos = 5;
+              intentos = 7;
           } else {
             intentos++;  
             System.out.println("Lo siento, esa no es la combinación");
             System.out.println("Introduce la contraseña de nuevo, por favor: ");
             contraseña = Integer.parseInt(System.console().readLine()); 
           }
-        }  while (intentos <= 4);
+        }  while (intentos < 4);
     }
 }
