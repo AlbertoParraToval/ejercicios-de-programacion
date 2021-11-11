@@ -13,17 +13,17 @@ public class Ejercicio7Tema5 {
       System.out.println("Introduce la contraseña: ");
       int contraseña = Integer.parseInt(System.console().readLine());      
       int codigo = 1234;
-      int intentos = 0;
+      int intentos = 1;
       do {
           if (contraseña == codigo) {
               System.out.println("La caja fuerte se ha abierto satisfactoriamente");
-              intentos = 6;
+              intentos = 5;
           } else {
             intentos++;  
             System.out.println("Lo siento, esa no es la combinación\n");
             System.out.println("Introduce la contraseña de nuevo, por favor: ");
             contraseña = Integer.parseInt(System.console().readLine()); 
           }
-        }  while (intentos < 5);
+        }  while (intentos <= 4);
     }
   }
