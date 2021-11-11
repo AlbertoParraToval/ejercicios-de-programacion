@@ -20,7 +20,7 @@ public class Ejercicio7Tema5 {
               intentos = 5;
           } else {
             intentos++;  
-            System.out.println("Lo siento, esa no es la combinación\n");
+            System.out.println("Lo siento, esa no es la combinación");
             System.out.println("Introduce la contraseña de nuevo, por favor: ");
             contraseña = Integer.parseInt(System.console().readLine()); 
           }
