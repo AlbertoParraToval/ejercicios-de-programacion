@@ -4,7 +4,6 @@
     acertamos, se nos mostrará el mensaje “Lo siento, esa no es la combinación”
     y si acertamos se nos dirá “La caja fuerte se ha abierto satisfactoriamente”.
     Tendremos cuatro oportunidades para abrir la caja fuerte.
-
  *
  * @author Alberto Parra Toval
  */
