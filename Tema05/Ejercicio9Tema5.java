@@ -10,7 +10,7 @@
  */
 public class Ejercicio9Tema5 {
     public static void main(String[] args) {
-        System.out.print("Introduzca el número que desee y le diré los dígitos que tiene: ");
+        System.out.println("Introduzca el número que desee y le diré los dígitos que tiene: ");
         int numeroIntroducido = Integer.parseInt(System.console().readLine());
         int numeroDeDigitos = 1;
         int i;

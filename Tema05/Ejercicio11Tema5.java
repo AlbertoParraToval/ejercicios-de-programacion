@@ -4,13 +4,14 @@
 
  * @author Alberto Parra Toval
  */
-public class Ejercicio9Tema5 {
+public class Ejercicio11Tema5 {
     public static void main(String[] args) {
-        System.out.println("Ejercicio Número al cuadrado y al cubo.");
-        System.out.print("Introduzca el número que desee y esbozaré el cuadrado y el cubo de dicho número: ");
-        int numero = Integer.parseInt(System.console().readLine());
-        
-        
-        
+        System.out.println("Ejercicio que muestra 5 numeros consecutivos y sus respectivos cuadrado y cubo");
+        System.out.print("Introduzca un número: ");
+        int numeroIntroducido = Integer.parseInt(System.console().readLine());
+        // For: I = numeroIntroducido y I debe ser menor a numero Introducido +5, se le suma I
+        for (int i = numeroIntroducido; i < numeroIntroducido + 5; i++) {
+        System.out.printf("%4d %6d %8d\n", i, i * i, i * i * i);
+        } 
     }
 }
