@@ -3,7 +3,7 @@
  *
  * @author Alberto Parra Toval
  */
-public class Ejercicio3Tema5 {
+public class Ejercicio3 {
     public static void main(String[] args) {
         int n = 0;
         do { 

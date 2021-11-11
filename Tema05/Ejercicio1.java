@@ -3,7 +3,7 @@
  *
  * @author Alberto Parra Toval
  */
-public class Ejercicio1Tema5 {
+public class Ejercicio1 {
     public static void main(String[] args) {
       for (int n = 0; n < 101; n += 5 ) {    
       System.out.println("n: " + n);

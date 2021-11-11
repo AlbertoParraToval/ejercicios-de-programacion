@@ -3,7 +3,7 @@
  *
  * @author Alberto Parra Toval
  */
-public class Ejercicio2Tema5 {
+public class Ejercicio2 {
     public static void main(String[] args) {
         int n = 0;
         while (n < 101) {  

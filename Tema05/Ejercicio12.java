@@ -7,7 +7,7 @@
  *
  * @author Alberto Parra Toval
  */
-public class Ejercicio12Tema5 {
+public class Ejercicio12 {
     public static void main(String[] args) {
         System.out.println("Serie de Fibonacci");
         int numero;

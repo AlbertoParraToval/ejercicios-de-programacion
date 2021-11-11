@@ -4,7 +4,7 @@
 
  * @author Alberto Parra Toval
  */
-public class Ejercicio11Tema5 {
+public class Ejercicio11 {
     public static void main(String[] args) {
         System.out.println("Ejercicio que muestra 5 numeros consecutivos y sus respectivos cuadrado y cubo");
         System.out.print("Introduzca un número: ");

@@ -7,7 +7,7 @@
  *
  * @author Alberto Parra Toval
  */
-public class Ejercicio7Tema5 {
+public class Ejercicio7 {
     public static void main(String[] args) {
       System.out.println("Ejercicio Caja Fuerte");
       System.out.println("Para abrir la caja fuerte dispone de 4 intentos, suerte.");

@@ -6,7 +6,7 @@
  *
  * @author Alberto Parra Toval
  */
-public class Ejercicio10Tema5 {
+public class Ejercicio10 {
     public static void main(String[] args) {
         System.out.println("Introduce los numeros que desees: ");
         int num = Integer.parseInt(System.console().readLine());  

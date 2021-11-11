@@ -8,7 +8,7 @@
  *
  * @author Alberto Parra Toval
  */
-public class Ejercicio9Tema5 {
+public class Ejercicio9 {
     public static void main(String[] args) {
         System.out.println("Introduzca el número que desee y le diré los dígitos que tiene: ");
         int numeroIntroducido = Integer.parseInt(System.console().readLine());

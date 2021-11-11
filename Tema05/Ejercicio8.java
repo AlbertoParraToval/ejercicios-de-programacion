@@ -3,7 +3,7 @@
  *
  * @author Alberto Parra Toval
  */
-public class Ejercicio8Tema5 {
+public class Ejercicio8 {
     public static void main(String[] args) {
       System.out.println("Ejercicios de Tablas");
       System.out.println("Introduce el número que desees: ");
