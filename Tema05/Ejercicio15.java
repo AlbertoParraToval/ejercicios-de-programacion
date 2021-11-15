@@ -15,28 +15,11 @@ public class Ejercicio15 {
         System.out.print("Introduzca la base: ");
         int base = Integer.parseInt(System.console().readLine());
         System.out.print("Introduzca el exponente: ");
-        int exponente = Integer.parseInt(System.console().readLine());
-        int potencia = 1;
-        //Si el exponente es 0    
-        if (exponente == 0) {
-                potencia = 1;
-        }
-        //Si el exponente es mayor que 0
-        if (exponente > 0) {
-            for (int i = 0; i < exponente; i++) {
-                potencia *= base;
-                
-            }
-        }
-        //Si el exponente es menor que 0
-        if (exponente < 0) {
-            for (int i = 0; i > base; i++) {
-                potencia *= base;
-        
-            }
-        potencia /= 1;
-        }
-
-        System.out.println("El resultado de " + base + "^" + exponente + " = " + potencia);
+        int exponenteIntroducido = Integer.parseInt(System.console().readLine());
+    
+       for (int i = 1; i <= exponenteIntroducido; i++) {
+        System.out.println("El resultado es: " + base + "^" + i);
+        System.out.println("--------------------");
+       }
     }
 }
