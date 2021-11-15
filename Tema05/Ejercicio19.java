@@ -15,7 +15,7 @@ public class Ejercicio19 {
         String caracter = System.console().readLine();
         
         int base = 1;
-        int longitudDeLinea = 1;
+        int longitud = 1;
         int espacios = alturaIntroducida-1;
         
         while (base <= alturaIntroducida) {
@@ -24,14 +24,14 @@ public class Ejercicio19 {
             System.out.print(" ");
           }
     
-          for (int i = 1; i <= longitudDeLinea; i++) {
+          for (int i = 1; i <= longitud; i++) {
             System.out.print(caracter);
           }
     
           System.out.println();
           base++;
           espacios--;
-          longitudDeLinea += 2;
+          longitud += 2;
         }
     }
 }
