@@ -1,5 +1,3 @@
-import javax.swing.plaf.synth.SynthGraphicsUtils;
-
 /**
  *  Escribe un programa que obtenga los números enteros comprendidos entre dos
     números introducidos por teclado y validados como distintos, el programa debe
