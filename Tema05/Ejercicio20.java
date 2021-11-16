@@ -31,7 +31,7 @@ public class Ejercicio20 {
           System.out.println();
           base++;
           espacios--;
-          longitudDeLinea += 2;
+          longitudDeLinea +=2;
         }
     }
 }
