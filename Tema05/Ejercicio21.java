@@ -1,4 +1,5 @@
 /**
+<<<<<<< HEAD
  *  Realiza un programa que vaya pidiendo números hasta que se introduzca un
     numero negativo y nos diga cuantos números se han introducido, la media de
     los impares y el mayor de los pares. El número negativo sólo se utiliza para
@@ -39,3 +40,41 @@ public class Ejercicio21 {
         System.out.println("El máximo de los pares es " + maximoPar);
       }
     }
+=======
+ *  Realiza un programa que pinte una pirámide por pantalla. La altura se debe
+    pedir por teclado. El carácter con el que se pinta la pirámide también se debe
+    pedir por teclado.
+ * @author Alberto Parra Toval
+ */
+public class Ejercicio20 {
+    public static void main(String[] args) {
+        System.out.println("[Piramide Hueca]");
+        System.out.println("--------------");
+        System.out.print("Introduzca la altura de la pirámide: ");
+        int alturaIntroducida = Integer.parseInt(System.console().readLine());
+    
+        System.out.print("Introduzca el carácter de relleno: ");
+        String caracter = System.console().readLine();
+        
+        int base = 1;
+        int longitudDeLinea = 1;
+        int espacios = alturaIntroducida-1;
+        
+        while (base <= alturaIntroducida) {
+        
+          for (int i = 1; i <= espacios; i++) {
+            System.out.print(" ");
+          }
+    
+          for (int i = 1; i <= longitudDeLinea; i++) {
+            System.out.print(caracter);
+          }
+    
+          System.out.println();
+          base++;
+          espacios--;
+          longitudDeLinea += 2;
+        }
+    }
+}
+>>>>>>> 77968f8b7816cc20deb6fba9625ef0268ad78b78

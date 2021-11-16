@@ -27,7 +27,7 @@ public class Ejercicio20 {
           for (int i = 1; i <= longitudDeLinea; i++) {
             System.out.print(caracter);
           }
-    
+          
           System.out.println();
           base++;
           espacios--;
