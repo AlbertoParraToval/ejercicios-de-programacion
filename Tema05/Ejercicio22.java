@@ -4,22 +4,30 @@
  */
 public class Ejercicio22 {
     public static void main(String[] args) {
-        System.out.println("[Numeros Primos desde el 2 al 100]");
-        System.out.println("-----------------------");
-       
-        int num = 2;
-        int contadorPrimos = 0;
-        boolean primo;
-        boolean noPrimo;
-        for (int i = 0; i < 101; i++) {
+        System.out.println("Programa que recoge los numeros primos desde el 2 hasta el 100");
+        System.out.print("\n"); 
+        int numInt = 2; 
+      
+        
+        int contDivisores = 2;
+
+        boolean pregPrimo = true;
+        for (int i = numInt; i <= 101; i++) {
             i++;
-
-            if (primo = true) {
-                contadorPrimos++;
+            do {
+                if (numInt % contDivisores == 0 && numInt != contDivisores) {
+                pregPrimo = false;
             }
-
-
-
+            contDivisores++;
+            } while (contDivisores < numInt && pregPrimo == true);
+            // Es menor que "<" porque np ùede ser el misom número
+            if ( pregPrimo == true ) {
+            System.out.print(numInt+" Es primo ");
+            } else {
+            System.out.print(numInt+" No es primo ");
+            } 
         }
-  }
+        
+    }
 }
+   // Fin Primo
