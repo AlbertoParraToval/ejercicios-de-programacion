@@ -4,14 +4,14 @@
     pedir por teclado.
  * @author Alberto Parra Toval
  */
-public class Ejercicio20 {
+public class Ejercicio21 {
     public static void main(String[] args) {
         System.out.println("[Piramide Hueca]");
         System.out.println("--------------");
-        System.out.print("Introduzca la altura de la pirámide: ");
+        System.out.print("Introduzca la altura de la piramide: ");
         int alturaIntroducida = Integer.parseInt(System.console().readLine());
     
-        System.out.print("Introduzca el carácter de relleno: ");
+        System.out.print("Introduzca el caracter de relleno: ");
         String caracter = System.console().readLine();
         
         int base = 1;
