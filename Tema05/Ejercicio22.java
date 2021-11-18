@@ -1,10 +1,12 @@
 /**
  * Muestra por pantalla todos los números primos entre 2 y 100, ambos incluidos.
+ * 
  * @author Alberto Parra Toval
  */
 public class Ejercicio22 {
     public static void main(String[] args) {
-        System.out.println("Programa que recoge los numeros primos desde el 2 hasta el 100");
+        System.out.println("[Programa que recoge los numeros primos desde el 2 hasta el 100]");
+        System.out.println("----------------------------------------------------------------");
         boolean esPrimo = true;
         
         //Definimos n = 2 y le ponemos la condicion de que no puede ser mayor que 100.
@@ -16,7 +18,7 @@ public class Ejercicio22 {
               esPrimo = false;
             }
           }
-          // Si es primo le decimos que nos muestre el número
+          // Si es primo le decimos que nos muestre solo el número primo 
           if (esPrimo) {
             System.out.print(n + " ");
           }
