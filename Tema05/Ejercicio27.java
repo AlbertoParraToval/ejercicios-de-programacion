@@ -23,5 +23,5 @@ public class Ejercicio27 {
       System.out.println(numeroIntroducido + " ");
     }
     System.out.println(" ");
-}
+  }
 }
