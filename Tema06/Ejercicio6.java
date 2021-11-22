@@ -6,36 +6,37 @@ menor o mayor que el número secretos
  */
 public class Ejercicio6 {
     public static void main(String[] args) {
-      System.out.println("Programa que intenta adivinar el password del usuario.");
-      int numIntentos = 1;
-      System.out.println("Introduce el numero que creas: ");
-      int passwordIntro = Integer.parseInt(System.console().readLine());
-      int password = 0;
-      int i;
-      for (i = password; i < 1; i++) {
-        System.out.print(((int)(Math.random()*100)) + " ");
-      }
-
-
-      while (numIntentos < 5) {
-        if (password != passwordIntro) {
-          System.out.println("El numero introducido es incorrecto");
-          if (passwordIntro < i) {
-          System.out.println("El numero introducido es menor al correcto");
-          } 
-          if (passwordIntro > i) {
-          System.out.println("El numero introducido es mayor al correcto");
-          }
-          passwordIntro = Integer.parseInt(System.console().readLine());
-          numIntentos++;
-        } else {
-        System.out.println("El numero introducido es el correcto");
-          break;
+      int oportunidades = 5;
+      int numeroIntroducido;
+      boolean acertado = false;
+      int numeroMisterioso = (int)(Math.random() * 101);
+      
+      System.out.println("Estoy pensando un numero del 0 al 100, intenta adivinarlo. Tienes 5 oportunidades.");
+  
+      do {
+        System.out.print("Introduce un numero: ");
+        numeroIntroducido = Integer.parseInt(System.console().readLine());
+        oportunidades--;
+  
+        if ( (numeroIntroducido > numeroMisterioso) && (oportunidades > 0) ){
+          System.out.println("El numero que estoy pensando es menor que " + numeroIntroducido);
+          System.out.println("Te quedan " + oportunidades + " oportunidades.");
         }
+        
+        if ( (numeroIntroducido < numeroMisterioso) && (oportunidades > 0) ){
+          System.out.println("El numero que estoy pensando es mayor que " + numeroIntroducido);
+          System.out.println("Te quedan " + oportunidades + " oportunidades.");
+        }
+        
+        if (numeroIntroducido == numeroMisterioso) {
+          acertado = true;
+          System.out.println("¡Enhorabuena! ¡has acertado!");
+        }
+      } while (!acertado && (oportunidades > 0));
+      
+      if (!acertado) {
+        System.out.println("Lo siento, no has acertado, el numero que estaba pensando era el " + numeroMisterioso);
       }
-      
-      
-      System.out.println("Ups te quedaste sin intentos");
     }
-}
+  }
 
