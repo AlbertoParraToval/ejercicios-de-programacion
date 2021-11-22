@@ -15,7 +15,7 @@ public class Ejercicio25 {
         int num = Integer.parseInt(System.console().readLine());
         int posicion = 1;
         do{
-            
+        
 
 
 

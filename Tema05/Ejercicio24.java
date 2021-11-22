@@ -2,30 +2,31 @@ public class Ejercicio24 {
     public static void main(String[] args) {
         System.out.println("[Piramide]");
         System.out.println("--------------");
-        System.out.print("Introduzca la altura de la pirámide: ");
+        System.out.print("Introduzca la altura de la piramide: ");
         int alturaIntroducida = Integer.parseInt(System.console().readLine());
-    
-        System.out.print("Introduzca el carácter de relleno: ");
-        int caracter = Integer.parseInt(System.console().readLine());;
         
-        int base = 1;
-        int longitud = 1;
+        int altura = 1;
+        int i = 0;
         int espacios = alturaIntroducida-1;
         
-        while (base <= alturaIntroducida) {
+        while (altura <= alturaIntroducida) {
         
-          for (int i = 1; i <= espacios; i++) {
+          for (i = 1; i <= espacios; i++) {
             System.out.print(" ");
           }
     
-          for (int i = 1; i <= longitud; i++) {
-            System.out.print(caracter);
+          for (i = 1; i <= altura; i++) {
+            System.out.print(i);
           }
-    
+
+          for (i = altura; i > 0; i--) {
+            System.out.print(i);
+          }
+
           System.out.println();
-          base++;
+          altura++;
           espacios--;
-          longitud += 2;
+        
         }
     }
 }
