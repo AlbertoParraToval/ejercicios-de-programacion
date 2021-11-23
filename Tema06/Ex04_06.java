@@ -2,7 +2,7 @@
  *
  * @author Alberto Parra Toval
  */
-public class Ejercicio4 {
+public class  Ex04_06 {
     public static void main(String[] args) {
         System.out.println("Programa que muestra 20 numeros aleatorios de o a 10 ");
         

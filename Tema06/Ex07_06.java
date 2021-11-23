@@ -3,7 +3,7 @@ para los 14 partidos y el pleno al quince (15 filas).
  *
  * @author Alberto Parra Toval
  */
-public class Ejercicio7 {
+public class Ex07_06 {
     public static void main(String[] args) {
       int resultadoPartido;
       int columnas = 3;

@@ -4,7 +4,7 @@ menor o mayor que el número secretos
  *
  * @author Alberto Parra Toval
  */
-public class Ejercicio6 {
+public class  Ex06_06 {
     public static void main(String[] args) {
       int oportunidades = 5;
       int numeroIntroducido;

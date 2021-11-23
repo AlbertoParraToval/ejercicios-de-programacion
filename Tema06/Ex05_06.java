@@ -4,7 +4,7 @@ de esos números.
  *
  * @author Alberto Parra Toval
  */
-public class Ejercicio5 {
+public class  Ex05_06 {
     public static void main(String[] args) {
         System.out.println("Programa que muestra 50 numeros aleatorios y dice el mayor , el menos y su media");
         int maximo = 100;

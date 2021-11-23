@@ -3,7 +3,7 @@ también la suma total (los puntos que suman entre los tres dados)
  *
  * @author Alberto Parra Toval
  */
-public class Ejercicio1 {
+public class Ex01_06 {
     public static void main(String[] args) {
         System.out.println("Programa que lanza 3 dados y suma sus resultados:");
         int dados;

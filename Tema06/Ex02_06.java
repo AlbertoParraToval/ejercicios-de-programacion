@@ -7,7 +7,7 @@ String.valueOf(n).
  *
  * @author Alberto Parra Toval
  */
-public class Ejercicio2 {
+public class  Ex02_06 {
     public static void main(String[] args) {
         System.out.println("Programa que muestra al azar una carta de la baraja francesa");
         int palo = (int)(Math.random()*4); 

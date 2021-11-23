@@ -3,7 +3,7 @@ de 40 cartas: 2, 3, 4, 5, 6, 7, sota, caballo, rey y as.
  *
  * @author Alberto Parra Toval
  */
-public class Ejercicio3 {
+public class  Ex03_06 {
     public static void main(String[] args) {
         System.out.println("Programa que muestra al azar una carta de la baraja Española");
         int familia = (int)(Math.random()*4); 
