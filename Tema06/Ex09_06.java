@@ -10,10 +10,10 @@ public class Ex09_06 {
       int num;
       int veces = 0;
       do {
-        num = (int)(Math.random()*100);
-        System.out.print(num + " ");
+        num = (int)(Math.random()*51) * 2;
+        System.out.print(num  + " ");
         veces++;
       } while (num != 24);
-     System.out.println("\nLa cantidad de numeros que ha mostrado hasta llegar al 24 es de  " + veces + " veces.");
+     System.out.println("\nLa cantidad de numeros que ha mostrado hasta llegar al 24 es de " + veces + " veces.");
     }
 }

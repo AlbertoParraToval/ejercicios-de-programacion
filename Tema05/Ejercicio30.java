@@ -7,22 +7,10 @@
 
  * @author Alberto Parra Toval
  */
-public class Ejercicio25 {
+public class Ejercicio30 {
     public static void main(String[] args) {
         System.out.println("[Numeros enteros comprendidos entre dos números]");
         System.out.println("----------------------------------");
-        System.out.print("Introduzca un número y se lo pondré al reves: ");
-        int num = Integer.parseInt(System.console().readLine());
-        int posicion = 1;
-        do{
-        
-
-
-
-
-
-        }while(num != 0);
-
         
     }
 }

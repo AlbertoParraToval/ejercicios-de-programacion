@@ -10,7 +10,7 @@ entre 1 y 40 caracteres.
  */
 public class Ex18_06 {
     public static void main(String[] args) {
-       
+    
 
     }
 }
