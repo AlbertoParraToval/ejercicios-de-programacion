@@ -14,15 +14,16 @@ public class Ex13_06 {
         do {
             for(int i = 0; i < 1; i++) {
                 primerDado = (int)(Math.random() * 6) + 1;
-                System.out.print(primerDado + " ");
+                System.out.print("[ " + primerDado + " ");
                 }
 
             for (int j = 0; j < 1; j++) {
                 segundoDado = (int)(Math.random() * 6) + 1;
-                System.out.print(segundoDado + " ");
+                System.out.print(segundoDado + " ] ");
             }
             numeroDeTiradas++;
         } while (primerDado != segundoDado);
-        System.out.println("El numero de tiradas ha sido de " + numeroDeTiradas + " veces");
+
+        System.out.println("\nEl numero de tiradas ha sido de " + numeroDeTiradas + " veces");
     }
 }
