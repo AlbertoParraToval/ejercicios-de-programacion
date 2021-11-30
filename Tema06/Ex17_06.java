@@ -22,7 +22,9 @@ public class Ex17_06 {
         }
 
         for (int j = 0; j < anchuraIntroducida; j++) {
-            System.out.print("*");
+            System.out.print(" * ");
         }
+
+        
     }
 }
