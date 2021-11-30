@@ -1,24 +1,22 @@
-/** Define un array de 12 números enteros con nombre num y asigna los valores
-según la tabla que se muestra a continuación. Muestra el contenido de todos
-los elementos del array. ¿Qué sucede con los valores de los elementos que no
-han sido inicializados?
+/** Escribe un programa que lea 10 números por teclado y que luego los muestre
+en orden inverso, es decir, el primero que se introduce es el último en mostrarse
+y viceversa.
  *
  * @author Alberto Parra Toval
  */
 public class Ex03_07 {
     public static void main(String[] args) {
-        System.out.println("[Programa que muestra y asigna valores a una tabla que se muestra acontinuación ]");
-        //DEFINO LA LONGITUD DE MI ARRAY
-        int[] num = new int[12];
-        num[0] = 39; 
-        num[1] = -2;
-        num[4] = 0;
-        num[6] = 14;
-        num[8] = 5;
-        num[9] = 120;
-        //MUESTRO POR PANTALLA LOS DATOS QUE SI ESTÁN Y LOS QUE NO ESTÁN SE TRANSFORMAN EN CEROS.
+        System.out.println("[Programa que muestra y asigna valores a una tabla que se muestra acontinuación donde el primer numero es el ultimo en mostrarse ]");
+        //DEFINO EL TAMAÑO DE MI ARRAY 
+        int num[] = new int[11];
+        //lE PIDO AL USUARIO QUE INTRODUZCA 10 NUMEROS
+        System.out.println("Introduce 10 numero y pulsa INTRO: ");
         for (int i = 0; i < num.length; i++) {
-            System.out.println("Indice:" + i + ":" + num[i]);
+            num[i] = Integer.parseInt(System.console().readLine());
+        }
+        //MUESTRO LOS NUMEROS EN PANTALLA DONDE EL ULTIMO ES EL PRIMERO Y EL PRIMERO ES MOSTRADO EL ULTIMO.
+        for (int j = 10; j < num.length; j--) {
+            System.out.println("Numero " + j + " = " + num[j]);
         }
     }
 }
