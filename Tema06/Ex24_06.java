@@ -6,7 +6,7 @@
  */
 public class Ex24_06 {
     public static void main(String[] args) {
-  
+
     
     }
 }
