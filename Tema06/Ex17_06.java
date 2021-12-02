@@ -17,14 +17,33 @@ public class Ex17_06 {
         System.out.println("Introduzca la anchura de la pecera, por favor: ");
         int anchuraIntroducida = Integer.parseInt(System.console().readLine());
 
-        for (int i = 0; i < alturaIntroducida; i++) {
-            System.out.println("*");
-        }
+        int position = 0;
+        int positionPez = (int)(Math.random()*(alturaIntroducida - 2)*(anchuraIntroducida - 2));
 
-        for (int j = 0; j < anchuraIntroducida; j++) {
+        //PARTE SUPERIOR DE LA PECERA
+        for (int p = 0; p < anchuraIntroducida; p++) {
             System.out.print(" * ");
         }
 
+        //PARTE CENTRAL DE LA PECERA
+        for(int i = 2; i <= alturaIntroducida; i++) {
+            System.out.print("*"); // parte izquierda de la pecera
+            for(int j = 2; j <= anchuraIntroducida; j++) {
+                if (position == positionPez) {
+                System.out.print("&");
+                } else {
+                    System.out.print(" ");
+                }
+                    position++;
+            } // for j
+                System.out.println("*"); // parte derecha de la pecera
+            }
+
+
+            //PARTE INFERIOR DE LA PECERA
+            for(int i = 0; i <= anchuraIntroducida; i++) {
+                System.out.print(" * ");
+                }
         
     }
 }
