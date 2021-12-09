@@ -12,17 +12,20 @@ public class Ex26_06 {
         System.out.println("Introduce la altura de la tableta: ");
         int alturaIntroducida = Integer.parseInt(System.console().readLine());
         int position = 0;
-        for (int i = 0; i < alturaIntroducida; i++) {
+        for (int i = 1; i < alturaIntroducida; i++) {
             System.out.print("\n*");
             position++;
             
-            for (int j = 0; j < anchuraIntroducida; j++) {
+            for (int j = 1; j < anchuraIntroducida; j++) {
                 System.out.print("*");
             position++;    
             }    
-            
+            do {
+                
+            } while (Math.random() < position);
         }
-       
+    
+
         
         
     

@@ -18,19 +18,19 @@ public class Ex10_06 {
             int caracter = (int)(Math.random()*5); 
             switch (caracter) {
                 case 1:
-                System.out.println("@");
+                System.out.print(" @ ");
                     break;
                 case 2:
-                System.out.println("*");
+                System.out.print(" * ");
                     break;
                 case 3:
-                System.out.println("=");
+                System.out.print(" = ");
                     break;
                 case 4:
-                System.out.println(".");
+                System.out.print(".");
                     break;
                 default:
-                System.out.println("|");
+                System.out.print(" | ");
                     break;
             }
         }
