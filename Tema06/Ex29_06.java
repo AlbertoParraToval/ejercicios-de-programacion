@@ -1,4 +1,4 @@
-import java.util.Scanner;
+
 /** Escribe un programa que simule la tirada de dos dados. El programa deberá
     continuar tirando los dados una y otra vez hasta que en alguna tirada los dos
     dados tengan el mismo valor
@@ -7,56 +7,110 @@ import java.util.Scanner;
  */
 public class Ex29_06 {
     public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
-    
-        System.out.println("1. Primavera");
-        System.out.println("2. Verano");
-        System.out.println("3. Otoño");
-        System.out.println("4. Invierno");
-        System.out.print("Seleccione la estación del año (1-4): ");
-        int estacion = Integer.parseInt(s.nextLine());
-    
-        int temperaturaMinima = 0;
-        int temperaturaMaxima = 0;
-        String cielo = "";
-        
-        switch(estacion) {
-          case 1: // Primavera
-            temperaturaMinima = (int)(Math.random() * 16 + 15); 
-            temperaturaMaxima = (int)(Math.random() * 16 + 15);
-            cielo = Math.random() <= 0.6 ? "Soleado" : "Nublado";
+      int temperatura1=0; 
+      int temperatura2=0;
+      int probSoleadoNublado=(int)(Math.random()*10);
+      String estadoCielo="";
+      //MOSTRAMOS LAS POSIBLES ESTACIONES Y PEDIMOS ELEGIR UNA
+      System.out.println("1. Primavera");
+      System.out.println("2. Verano");
+      System.out.println("3. Otoño");
+      System.out.println("4. Invierno");
+      System.out.print("Seleccione la estación del año (1-4): ");
+      int estacion = Integer.parseInt(System.console().readLine()) ;
+      System.out.println("Previsión del tiempo para mañana");
+      System.out.println("--------------------------------");
+      
+      switch (estacion){
+        //VERANO
+        case 1:
+          temperatura1 =(int)(Math.random()* 16 + 15);
+          temperatura2 =(int)(Math.random()* 16 + 15);
+          switch(probSoleadoNublado){
+            case 1:
+              estadoCielo="Nublado";
             break;
-          case 2: // Verano
-            temperaturaMinima = (int)(Math.random() * 21 + 25); 
-            temperaturaMaxima = (int)(Math.random() * 21 + 25);
-            cielo = Math.random() <= 0.8 ? "Soleado" : "Nublado";
+            case 2:
+              estadoCielo="Nublado";
             break;
-          case 3: // Otoño
-            temperaturaMinima = (int)(Math.random() * 11 + 20); 
-            temperaturaMaxima = (int)(Math.random() * 11 + 20);
-            cielo = Math.random() <= 0.4 ? "Soleado" : "Nublado";
+            case 3:
+              estadoCielo="Nublado";
             break;
-          case 4: // Invierno
-            temperaturaMinima = (int)(Math.random() * 26); 
-            temperaturaMaxima = (int)(Math.random() * 26);
-            cielo = Math.random() <= 0.2 ? "Soleado" : "Nublado";
+            case 4:
+              estadoCielo="Nublado";
             break;
             default:
-            System.out.println("La estación seleccionada no es correcta.");
-        }
+              estadoCielo="Soleado";
+            break;
+          }
+        break;
+        //PRIMAVERA
+        case 2:
+          temperatura1 =(int)(Math.random()* 21 + 25);
+          temperatura2 =(int)(Math.random()* 21 + 25);
+          switch(probSoleadoNublado){
+            case 1:
+              estadoCielo="Nublado";
+            break;
+            case 2:
+              estadoCielo="Nublado";
+            break;
+            default:
+              estadoCielo="Soleado";
+            break;
+          }
+        break;
+        //OTOÑO
+        case 3:
+          temperatura1 =(int)(Math.random()* 11 + 30);
+          temperatura2 =(int)(Math.random()* 11 + 30);
+          switch(probSoleadoNublado){
+            case 1:
+              estadoCielo="Nublado";
+            break;
+            case 2:
+              estadoCielo="Nublado";
+            break;
+            case 3:
+              estadoCielo="Nublado";
+            break;
+            case 4:
+              estadoCielo="Nublado";
+            break;
+            default:
+              estadoCielo="Soleado";
+            break;
+          }
+        break;
+        //INVIERNO
+        case 4:
+          temperatura1 =(int)(Math.random()* 25);
+          temperatura2 =(int)(Math.random()* 25);
+          switch(probSoleadoNublado){
+            case 1:
+              estadoCielo="Soleado";
+            break;
+            case 2:
+              estadoCielo="Soleado";
+            break;
+            default:
+              estadoCielo="Nublado";
+            break;
+          }
+        break;
+        default:
         
-        // Si la mínima es mayor, se intercambian las temperaturas
-        if (temperaturaMinima > temperaturaMaxima) {
-            int aux = temperaturaMinima;
-            temperaturaMinima = temperaturaMaxima;
-            temperaturaMaxima = aux;
-        }
-        
-        System.out.println("Previsión del tiempo para mañana");
-        System.out.println("--------------------------------");
-        System.out.println("Temperatura mínima: " + temperaturaMinima);
-        System.out.println("Temperatura máxima: " + temperaturaMaxima);
-        System.out.println(cielo);
+      }
+      if (temperatura1 <= temperatura2){
+        System.out.println("Temperatura mín: "+ temperatura1);
+        System.out.println("Temperatura max: "+ temperatura2);
+        System.out.println(estadoCielo);
+      }else if (temperatura2 <= temperatura1){
+        System.out.println("Temperatura min: "+ temperatura2);
+        System.out.println("Temperatura max: "+ temperatura1);
+        System.out.println(estadoCielo);
+      }
+      temperatura2 =(int)(Math.random()* 45)+25;
     }
-
 }
+    
