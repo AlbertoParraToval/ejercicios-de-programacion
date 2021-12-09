@@ -8,18 +8,7 @@ han sido inicializados?
 public class Ex06_07 {
     public static void main(String[] args) {
         System.out.println("[Programa que muestra y asigna valores a una tabla que se muestra acontinuación ]");
-        //DEFINO LA LONGITUD DE MI ARRAY
-        int[] num = new int[12];
-        num[0] = 39; 
-        num[1] = -2;
-        num[4] = 0;
-        num[6] = 14;
-        num[8] = 5;
-        num[9] = 120;
-        //MUESTRO POR PANTALLA LOS DATOS QUE SI ESTÁN Y LOS QUE NO ESTÁN SE TRANSFORMAN EN CEROS.
-        for (int i = 0; i < num.length; i++) {
-            System.out.println("Indice:" + i + ":" + num[i]);
-        }
+        
     }
 }
 
