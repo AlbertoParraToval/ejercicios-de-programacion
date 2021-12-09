@@ -7,27 +7,33 @@ de la tableta.
 public class Ex26_06 {
     public static void main(String[] args) {
         System.out.println("Tableta de chocolate con bocados");
+        //PIDO LAS MEDIDAS DE MI TABLETA
         System.out.println("Introduce la anchura de la tableta: ");
         int anchuraIntroducida = Integer.parseInt(System.console().readLine());
         System.out.println("Introduce la altura de la tableta: ");
         int alturaIntroducida = Integer.parseInt(System.console().readLine());
-        int position = 0;
-        for (int i = 1; i < alturaIntroducida; i++) {
-            System.out.print("\n*");
-            position++;
-            
-            for (int j = 1; j < anchuraIntroducida; j++) {
+        //POSICION RAMDON DEL MORDISCO
+        int posicionMordisco = (int) (Math.random() * (anchuraIntroducida * 2 + (alturaIntroducida - 2) * 2));
+        //DEFINIMOS LA VARIABLE POSICION
+        int posicion = 0;
+        //DIBUJAMOS UNA LINEA
+        for (int i = 0; i < alturaIntroducida; i++) {
+            //DIBUJAMOS LA ANCHURA Y DEFINIMOS SI ESTA EN EL BORDE 
+            for (int j = 0; j < anchuraIntroducida; j++) {
+                boolean estaEnBorde = (i == 0) || (i == alturaIntroducida - 1) || (j == 0) || (j == anchuraIntroducida - 1);
+                //CONDICION PARA QUE POSICION == MORDISCO Y TIENE QUE ESTAR EN EL BORDE
+                if ((posicion == posicionMordisco) && estaEnBorde) {
+                System.out.print(" ");
+                } else {
                 System.out.print("*");
-            position++;    
-            }    
-            do {
-                
-            } while (Math.random() < position);
+                }
+                //SI ESTA EN EL BORDE
+                if (estaEnBorde) {
+                posicion++;
+                }
+            }
+            //DEJAMOS EL ESPACIO DEL BOCADO
+            System.out.println();
         }
-    
-
-        
-        
-    
     }
 }
