@@ -3,7 +3,7 @@ public class Ex33_05 {
     System.out.println("[Programa que dibuja una U en base a su altura]");
     System.out.print("Introduce la altura de tu U (min 4): ");
       int alturaIntroducida =  Integer.parseInt(System.console().readLine());
-      int anchura = alturaIntroducida -2 ;
+      int anchura = alturaIntroducida - 2 ;
       int espacios = alturaIntroducida;
       
       if (alturaIntroducida > 3) {
