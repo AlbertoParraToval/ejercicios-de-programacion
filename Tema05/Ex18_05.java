@@ -5,7 +5,7 @@
     7.
  * @author Alberto Parra Toval
  */
-public class Ex11_05 {
+public class Ex18_05 {
     public static void main(String[] args) {
         System.out.println("[Numeros enteros comprendidos entre dos números]");
         System.out.println("----------------------------------");
