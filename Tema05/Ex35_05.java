@@ -62,7 +62,7 @@ public class Ex35_05 {
             espaciosPorDelante--;
             espaciosInternos+=2;
           } // while parte de abajo ///////////////////////
-        } // else
+        }
     }
 }
     
