@@ -13,7 +13,8 @@ public class Ex09_06 {
         num = (int)(Math.random()*51) * 2;
         System.out.print(num  + " ");
         veces++;
-      } while (num != 24);
-     System.out.println("\nLa cantidad de numeros que ha mostrado hasta llegar al 24 es de " + veces + " veces.");
+      } while (num != 24); // Se ejecutara es bucle hasta que el numero aleatorio coincida con 24
+      //Se muestra todas las veces que ha tenido que generar un numero hasta llegar a 24
+      System.out.println("\nLa cantidad de numeros que ha mostrado hasta llegar al 24 es de " + veces + " veces.");
     }
 }
