@@ -6,6 +6,7 @@ de 40 cartas: 2, 3, 4, 5, 6, 7, sota, caballo, rey y as.
 public class  Ex03_06 {
     public static void main(String[] args) {
         System.out.println("Programa que muestra al azar una carta de la baraja Española");
+       //Defino la variable familia como un numero aleatorio de 0 a 4 
         int familia = (int)(Math.random()*4); 
         switch (familia) {
           case 1:
@@ -21,7 +22,7 @@ public class  Ex03_06 {
             System.out.println("Bastos");
             break;
         }
-
+        // Defino la varibale num como un numero aleatorio hasta 13 que son las distinta posibilidads de mi switch
         int num = (int)(Math.random()*13);
         switch (num) {
           case 1:
