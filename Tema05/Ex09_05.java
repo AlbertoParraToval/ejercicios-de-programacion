@@ -10,16 +10,18 @@
  */
 public class Ex09_05 {
     public static void main(String[] args) {
-        System.out.println("Introduzca el número que desee y le diré los dígitos que tiene: ");
+      // Introducimos el numero  
+      System.out.println("Introduzca el numero que desee y le dire los digitos que tiene: ");
         int numeroIntroducido = Integer.parseInt(System.console().readLine());
         int numeroDeDigitos = 1;
         int i;
         i = numeroIntroducido;
         
+        //La condicion para que empiece a contar los numeros es que sea mayor a 10
         while (i > 10) {
-          i /= 10;
+          i /= 10; //lo divide y si sigue siendo mayor a 10 lo cuenta
           numeroDeDigitos++;
-        System.out.println(numeroIntroducido + " tiene " + numeroDeDigitos + " dígitos");
+        System.out.println(numeroIntroducido + " tiene " + numeroDeDigitos + " digitos");
       }
     }
 }
