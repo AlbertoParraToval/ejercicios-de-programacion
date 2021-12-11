@@ -7,6 +7,7 @@
 public class Ex05_05 {
     public static void main(String[] args) {
       int n = 320;
+      // definimos el comienzo con la variable n, y ponemos la condicion de que si n es menor que 160 pare, va descontando de 20 en 20 
       while ( n > 159) {    
       n -= 20;
       System.out.println("n: " + n);
