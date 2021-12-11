@@ -24,7 +24,7 @@ public class Ex11_05{
         fibo1=1;
         fibo2=1;
         System.out.println(fibo1 + " ");
-        //Con un for vamos sumando ambos números.
+        //Con un for vamos sumando ambos números hasta que i <= al numero que hemos introducido
         for(i = 2; i <= numero; i++){
             System.out.println(fibo2 + " ");
             fibo2 = fibo1 + fibo2;
