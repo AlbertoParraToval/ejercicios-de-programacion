@@ -4,7 +4,7 @@
     unidad
  * @author Alberto Parra Toval
  */
-public class Ex11_05 {
+public class Ex16_05 {
     public static void main(String[] args) {
         System.out.println("[Numeros Primos o no Primos]");
         System.out.println("----------------------------");
