@@ -7,6 +7,7 @@ public class Ex22_05 {
     public static void main(String[] args) {
         System.out.println("[Programa que recoge los numeros primos desde el 2 hasta el 100]");
         System.out.println("----------------------------------------------------------------");
+        //Definimos nuestra booleana
         boolean esPrimo = true;
         
         //Definimos n = 2 y le ponemos la condicion de que no puede ser mayor que 100.
