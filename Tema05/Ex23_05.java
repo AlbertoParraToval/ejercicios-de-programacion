@@ -14,7 +14,7 @@ public class Ex23_05 {
         int numeroIntroducido;
         int suma = 0;
         int numeroDeElementos = 0;
-        // Usando un Do-while con la condicion de que la suma debe ser menor o igual a 10000
+        // Usando un Do-while con la condicion de que la suma debe ser menor o igual a 10000 y que una vez que traspase eso pare
         do {
             numeroIntroducido = Integer.parseInt(System.console().readLine());
             suma += numeroIntroducido;
