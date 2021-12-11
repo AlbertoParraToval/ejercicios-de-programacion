@@ -4,10 +4,11 @@
     los 5 primeros números enteros a partir de uno que se introduce por teclado.
  * @author Alberto Parra Toval
  */
-public class Ex11_05{
+public class Ex14_05{
     public static void main(String[] args) {
         System.out.println("[Ejercicio Base y Exponente]");
         System.out.println("----------------------------");
+        //Pedimos al ususario el exponente y la base
         System.out.print("Introduzca la base: ");
         int base = Integer.parseInt(System.console().readLine());
         System.out.print("Introduzca el exponente: ");
@@ -30,7 +31,7 @@ public class Ex11_05{
             }
         potencia /= 1;
         }
-
+        //Mostramos el resultado por pantalla
         System.out.println("El resultado de " + base + "^" + exponente + " = " + potencia);
     }
 }
