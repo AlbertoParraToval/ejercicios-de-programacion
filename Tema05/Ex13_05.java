@@ -18,6 +18,7 @@ public class Ex11_05 {
           negativos++;
         }
       }
+      //Mostramos los numeros tanto positivos como negativos
       System.out.println("Los numeros positivos son " + positivos + " y los números negativos son " + negativos);
   }
 }
