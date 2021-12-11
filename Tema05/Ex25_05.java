@@ -1,28 +1,22 @@
 /**
- *  Escribe un programa que obtenga los números enteros comprendidos entre dos
-    números introducidos por teclado y validados como distintos, el programa debe
-    empezar por el menor de los enteros introducidos e ir incrementando de 7 en
-    7.
+ *  Programa te pedira un numero y te lo leera al reves
 .
 
  * @author Alberto Parra Toval
  */
 public class Ex25_05 {
     public static void main(String[] args) {
-        System.out.println("[Numeros enteros comprendidos entre dos números]");
-        System.out.println("----------------------------------");
-        System.out.print("Introduzca un número y se lo pondré al reves: ");
-        int num = Integer.parseInt(System.console().readLine());
-        int posicion = 1;
-        do{
-        
-
-
-
-
-
-        }while(num != 0);
-
-        
+        System.out.println("El programa leera un numero y mostrara ese numero al reves.");
+        // Pedimos al usuario un numero
+        System.out.print("Introduce un numero por teclado: ");
+        int n = Integer.parseInt(System.console().readLine()) ;
+        int voltear = 0;
+        while (n > 0){
+            //Voltear lo multiplicamos por 10 situandolo en el digito sigueinte y le sumamos la division del numero etre 10
+            voltear = (voltear * 10) + (n %10);
+            n /= 10; // Al numero le dividimos 10 para situalrnos en la posicion 1
+        }
+        //Mostramos el resultado por pantalla
+        System.out.println("La numero con el orden distinto es: " + voltear);
     }
 }
