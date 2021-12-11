@@ -7,11 +7,13 @@
 public class Ex11_05 {
     public static void main(String[] args) {
         System.out.println("Ejercicio que muestra 5 numeros consecutivos y sus respectivos cuadrado y cubo");
+        //Pido un numero al usuario
         System.out.print("Introduzca un número: ");
         int numeroIntroducido = Integer.parseInt(System.console().readLine());
+        System.out.println("  Num " + " Cuadrado " +  " Cubo");
         // For: I = numeroIntroducido y I debe ser menor a numero Introducido +5, se le suma I
         for (int i = numeroIntroducido; i < numeroIntroducido + 5; i++) {
-        System.out.printf("%4d %6d %8d\n", i, i * i, i * i * i);
+            System.out.printf("%4d %6d %8d\n", i, i * i, i * i * i);
         } 
     }
 }
