@@ -5,6 +5,7 @@
  */
 public class Ex02_05 {
     public static void main(String[] args) {
+        // El buble se repetirá hasta que supere 100 y los numeros iran contando de 5 en 5
         int n = 0;
         while (n < 101) {  
         n += 5;
