@@ -10,17 +10,17 @@
 public class Ejercicio12 {
     public static void main(String[] args) {
         System.out.println("Serie de Fibonacci");
-        int numero;
+        int numero; //NUMERO A PARTIR VAMOS A EMPEZAR A CONTAR
         int fibo1;
         int fibo2;
         int i;
         // Ponemos la condición de que el numero introducido tiene que ser mayor que 1.
         do{
             System.out.println("Introduce numero mayor que 1: ");
-             numero = Integer.parseInt(System.console().readLine());
+            numero = Integer.parseInt(System.console().readLine());
         } while(numero <= 1);
         //Mostramos en pantalla los dos primeros numeros que son 1 y 1, nos apoyaremos en ellos.
-        System.out.println("Los " + numero + " son los términos de la serie de Fibonacci son:");                 
+        System.out.println("El numero " + numero + " son los terminos de la serie de Fibonacci son:");                 
         fibo1=1;
         fibo2=1;
         System.out.println(fibo1 + " ");
