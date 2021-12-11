@@ -12,7 +12,7 @@ public class Ejercicio22 {
         //Definimos n = 2 y le ponemos la condicion de que no puede ser mayor que 100.
         for (int n = 2; n <= 100; n++) {
           esPrimo = true;
-          //Definimos otra vez dicha condicion esta vez implementando un if que nos permite saber si el esPrimo es false o true
+          //Definimos otra vez dicha condicion esta vez implementando un if que nos permite saber si el esPrimo es false o true.
           for (int i = 2; i < n; i++) {
             if (n % i == 0) {
               esPrimo = false;
