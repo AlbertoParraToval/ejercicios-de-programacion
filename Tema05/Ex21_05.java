@@ -12,7 +12,7 @@ public class Ex21_05 {
       System.out.println("Programa Media Impares, Mayor Par y Numeros Introducidos Totales");
       System.out.println("--------------------------------------------------");
       System.out.println("Vaya Introduciendo numeros, puede terminar mediante la introduccion de un numero negativo. ");
-      //Definimos todas las varibales que vaya a utilizar
+      //Definimos todas las varibales que vayamos a utilizar
       int numeroIntroducido;
       int numeroDeElementos = 0;
       int sumaImpares = 0;
@@ -33,8 +33,8 @@ public class Ex21_05 {
           }
         }
       } while (numeroIntroducido >= 0);//Este bucle se ejecutará hasta que introduzcamos un número negativo.
-      
-      //Mostramos los resultados obtenidos en nuestro bucle
+
+      //Mostramos los resultados obtenidos en nuestro bucle 
       System.out.println("Ha introducido " + numeroDeElementos + " numeros");
       System.out.println("La media de los impares es " + sumaImpares/numeroDeElementosImpares);
       System.out.println("El maximo de los pares es " + maximoPar);
