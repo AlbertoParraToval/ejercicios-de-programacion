@@ -5,6 +5,7 @@
  */
 public class Ex01_05 {
     public static void main(String[] args) {
+      // El buble se repetirá hasta que supere 100 y los numeros iran contando de 5 en 5
       for (int n = 0; n < 101; n += 5 ) {    
       System.out.println("n: " + n);
       System.out.println("--------");
@@ -13,10 +14,3 @@ public class Ex01_05 {
       System.out.println("Fin");
     }
 }
-
-  //Opción 2
-  //for(int n = 0; n <= 20; n++){
-    //if (n % 5 == 0){
-      //System.out.println(n);
-    //}
-  //}
