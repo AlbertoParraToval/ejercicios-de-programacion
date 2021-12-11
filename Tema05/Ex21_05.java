@@ -12,16 +12,16 @@ public class Ex21_05 {
       System.out.println("Programa Media Impares, Mayor Par y Numeros Introducidos Totales");
       System.out.println("--------------------------------------------------");
       System.out.println("Vaya Introduciendo numeros, puede terminar mediante la introduccion de un numero negativo. ");
-     
+      //Definimos todas las varibales que vaya a utilizar
       int numeroIntroducido;
       int numeroDeElementos = 0;
       int sumaImpares = 0;
       int numeroDeElementosImpares = 0;
       int maximoPar = 0;
-        //Este bucle se ejecutará hasta que introduzcamos un número negativo.
+
       do {
         numeroIntroducido = Integer.parseInt(System.console().readLine());
-        
+        // Si el numero introducido es positivo
         if (numeroIntroducido >= 0) {
           numeroDeElementos++;
           if ((numeroIntroducido % 2) == 1) { // En el caso de que el número sea impar
@@ -32,7 +32,8 @@ public class Ex21_05 {
               maximoPar = numeroIntroducido;
           }
         }
-      } while (numeroIntroducido >= 0);
+      } while (numeroIntroducido >= 0);//Este bucle se ejecutará hasta que introduzcamos un número negativo.
+      
       //Mostramos los resultados obtenidos en nuestro bucle
       System.out.println("Ha introducido " + numeroDeElementos + " numeros");
       System.out.println("La media de los impares es " + sumaImpares/numeroDeElementosImpares);
