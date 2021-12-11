@@ -8,6 +8,7 @@ public class Ex11_05 {
     public static void main(String[] args) {
         System.out.println("[Numeros Primos o no Primos]");
         System.out.println("----------------------------");
+        //Definimos nuestra boolean como true y pedimos al ususario un numero
         System.out.print("Introduzca un numero entero: ");
         int numeroIntroducido = Integer.parseInt(System.console().readLine());
         boolean numeroPrimo = true;
