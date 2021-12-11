@@ -10,6 +10,7 @@ String.valueOf(n).
 public class  Ex02_06 {
     public static void main(String[] args) {
         System.out.println("Programa que muestra al azar una carta de la baraja francesa");
+        //Definimos la varibale palo como un numero aleatorio de 0 a 4
         int palo = (int)(Math.random()*4); 
         switch (palo) {
           case 1:
@@ -26,6 +27,7 @@ public class  Ex02_06 {
             break;
         }
 
+        // Defino la variable numero con un numero aleatorio de 0 a 13
         int num = (int)(Math.random()*13);
         switch (num) {
           case 1:
