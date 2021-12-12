@@ -1,8 +1,6 @@
-
-/** Escribe un programa que simule la tirada de dos dados. El programa deberá
-    continuar tirando los dados una y otra vez hasta que en alguna tirada los dos
-    dados tengan el mismo valor
+/** Programa que muestra una pecera, donde hay un pez, un caballito de mar y una caracola de forma aleatorioa
  *
+ * 
  * @author Alberto Parra Toval
  */
 public class Ex30_06 {
@@ -37,7 +35,7 @@ public class Ex30_06 {
             }else if (posicion == posicionCaracola){
               System.out.print("@");
               
-            }else if (posicion==posicionCaballito){
+            }else if (posicion == posicionCaballito){
               System.out.print("$");
             }else{
               System.out.print(" ");
@@ -51,7 +49,5 @@ public class Ex30_06 {
       for (int i = 0; i < anchura; i++){
         System.out.print("*");
       }
-      
     }
   }
-    
