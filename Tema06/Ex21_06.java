@@ -15,6 +15,7 @@ Ejemplo:
 public class Ex21_06 {
     public static void main(String[] args) {
         System.out.println("[Programa que lanza al aire 5 monedas]");
+        //Mis dos variables 
         String moneda = "";
         String posicion = "";
         //DECLARO UN FOR PARA EL NUMERO DE TIRADAS DE MONEDAS
