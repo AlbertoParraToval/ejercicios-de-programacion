@@ -7,10 +7,11 @@
 public class Ex23_06 {
     public static void main(String[] args) {
         System.out.println("Realiza una tirada de dados con figuras del poker");
+        //Mi variable que se va a mostrar
         String dados = "";
-        
+        // El bucle se repetira 5 veces 
         for (int i = 0; i < 5; i++) {
-            switch((int)(Math.random() * 6)) {
+            switch((int)(Math.random() * 6)) { // 6 casos distintos
                 case 0:
                     dados = "As";
                     break;
@@ -31,6 +32,7 @@ public class Ex23_06 {
                     break;
                     default:
                 }
+                //Muestro el resultado en pantalla
                 System.out.print(dados + " ");
         }
         
