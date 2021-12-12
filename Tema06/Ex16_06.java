@@ -19,7 +19,7 @@ public class Ex16_06 {
         int figura1 = 0;
         int figura2 = 0;
         int figura3 = 0;
-            //Hacemos el for con la condicion de que max sea 3 y un switch con las posibles opciones.
+            //Hacemos el for con la condicion de que max sea 3 y un switch con las posibles opciones de figura
         for (int i = 0; i < 3; i++) {
           figura = (int)(5 * Math.random());
             switch(figura) {
@@ -56,9 +56,9 @@ public class Ex16_06 {
         }
             //Ponemos las condiciones:
             //1º Decimos que si ninguna de las figura es igual .
-            //2º Decimos que si dos de las figuras son iguales.
+            //2º Decimos que si dos de las figuras son iguales. 
             //3ºDecimos que todas las figuras son iguales.
-            if ((figura1 != figura2) && (figura2 != figura3) && (figura1 != figura3)) {
+            if ((figura1 != figura2) && (figura2 != figura3) && (figura1 != figura3)) { 
             System.out.print("\nLo siento, ha perdido.");
             } else if ((figura1 == figura2) && (figura2 == figura3)) {
             System.out.print("\nEnhorabuena, ha ganado 10 monedas.");
