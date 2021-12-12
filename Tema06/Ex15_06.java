@@ -16,42 +16,67 @@ d) La última nota de la melodía debe coincidir con la primera.
 public class Ex15_06 {
     public static void main(String[] args) {
         System.out.println("[Programa que muestra una melodia]");
-        for (int longitudMelodia = (int)(Math.random()*28); longitudMelodia <= 28; longitudMelodia+=4) {
-            for (int i = 0; i <=4; i++) {
-                int notaMusical = (int)(Math.random() * 7);
-                switch (notaMusical) {
-                    case 1:
-                        System.out.print("do" + " ");
-                        break;
-        
-                    case 2:
-                        System.out.print("re" + " ");
-                        break;
-        
-                    case 3:
-                        System.out.print("mi" + " ");
-                        break;
-        
-                    case 4:
-                        System.out.print("fa" + " ");
-                        break;
-        
-                    case 5:
-                        System.out.print("sol" + " ");
-                        break;
-        
-                    case 6:
-                        System.out.print("la" + " ");
-                        break;
-                
-                    default:
-                        System.out.print("si" + " ");
-                        break;
-                }
-                
+        System.out.println(" ");
+        // Defino el compas
+        int compas=(int)(Math.random()* (7 - 4))+ 4;
+        String primeraMelodia="";
+        // Defino el tipo de grupo
+        int grupo = (int)(Math.random()* (7 - 4))+ 4;
+        int contadorMelodia = 0;
+        int notas = 0;
+        for (int i = 0; i < grupo -1; i++){
+        System.out.print("| ");
+        contadorMelodia++;
+        for (int contador = 0; contador < compas; contador++){
+            notas = (int)(Math.random()* 7)+1;
+            switch (notas){
+            case 1:
+                System.out.print("do ");
+                if (contadorMelodia <= 1){
+                primeraMelodia= primeraMelodia + "do ";
+                } 
+            break; 
+            case 2:
+                System.out.print("re ");
+                if (contadorMelodia <= 1){
+                primeraMelodia= primeraMelodia + "re ";
+                } 
+            break; 
+          case 3:
+            System.out.print("mi ");
+            if (contadorMelodia <= 1){
+              primeraMelodia= primeraMelodia + "mi ";
             }
-            System.out.print(" | ");
+          break; 
+          case 4:
+            System.out.print("fa ");
+            if (contadorMelodia <= 1){
+              primeraMelodia= primeraMelodia + "fa ";
+            }
+          break;
+          case 5:
+            System.out.print("sol ");
+            if (contadorMelodia <= 1){
+            primeraMelodia= primeraMelodia + "sol ";
+            }
+          break;
+          case 6:
+            System.out.print("la ");
+            if (contadorMelodia <= 1){
+              primeraMelodia= primeraMelodia + "la ";
+            }
+          break;
+          case 7:
+            System.out.print("si ");
+            if (contadorMelodia <= 1){
+              primeraMelodia= primeraMelodia + "si ";
+            }
+          break;
+          default:
         }
-        System.out.println("|");
-    }
+        
+      }
+    }System.out.print("| ");
+    System.out.println(""+primeraMelodia+"||");
+  }
 }
