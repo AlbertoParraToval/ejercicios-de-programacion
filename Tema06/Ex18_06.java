@@ -15,14 +15,15 @@ public class Ex18_06 {
         int color1;
         int color2;
         int color3;
-    
+        //varibles que generan numeros aleatorios de 0 a 6
         do {
           color1 = (int)(Math.random() * 6);
           color2 = (int)(Math.random() * 6);
           color3 = (int)(Math.random() * 6);
-        } while ((color1 == color2) || (color1 == color3) || (color2 == color3));
+        } while ((color1 == color2) || (color1 == color3) || (color2 == color3)); // Mientras no coincidan entre ellos
         
-        String primerColor = "";
+        //Primer Color
+        String primerColor = ""; 
         switch(color1) {
             case 0:
                 primerColor = "\033[31m rojo";
@@ -44,6 +45,7 @@ public class Ex18_06 {
                     break;
         }
 
+        //Segundo COlor
         String segundoColor = "";
         switch(color2) {
             case 0:
@@ -66,7 +68,7 @@ public class Ex18_06 {
                 break;
             }
 
-
+            //Tercer Color
             String tercerColor = "";
             switch(color3) {
                 case 0:
@@ -88,7 +90,7 @@ public class Ex18_06 {
                     tercerColor= "\033[37m naranja";
                     break;
                 }
-
+                //Mostrar los colores que nos han dado
                 System.out.print(primerColor + segundoColor + tercerColor);
     }
 }
