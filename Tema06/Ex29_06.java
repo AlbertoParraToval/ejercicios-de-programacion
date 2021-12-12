@@ -101,6 +101,7 @@ public class Ex29_06 {
         default:
         
       }
+      //Las diferentes opciones en la temperatura
       if (temperatura1 <= temperatura2){
         System.out.println("Temperatura mín: "+ temperatura1);
         System.out.println("Temperatura max: "+ temperatura2);
