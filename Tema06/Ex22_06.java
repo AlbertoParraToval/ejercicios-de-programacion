@@ -28,6 +28,7 @@ public class Ex22_06 {
         // PINTA EL CUERPO
         System.out.println("#");
 
+        //Le restamos 1 a la longitud de la serpiente para que se vaya aminorando.
         snakeSize--;
         }
     }
