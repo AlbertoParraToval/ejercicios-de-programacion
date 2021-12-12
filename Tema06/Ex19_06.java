@@ -9,6 +9,7 @@ números generados.
 public class Ex19_06 {
     public static void main(String[] args) {
       System.out.println("[Programa que muestra 50 numeros entre el -100 y el 200 , su max par y la media de todos]");
+      //Defino las variables  
         int num = 0;
         int maxPar =0;
         int suma = 0;
@@ -17,15 +18,18 @@ public class Ex19_06 {
         for (int i = 0; i < 50; i++) {
           num = (int)(Math.random() * 301) - 100;
           System.out.print(num + " ");
-          //PARA SABER SI ES PAR O IMPAR
+          //PARA SABER SI ES PAR O IMPAR 
           if (num % 2 == 0) { 
-            if (num > maxPar) maxPar = num;
+            if (num > maxPar) 
+            maxPar = num; //Si es par
           } else {
-            if (num < minImpar) minImpar = num;
+            if (num < minImpar) 
+            minImpar = num; //Si es impar
           }
           //REALIZAMOS LA SUMA DE LOS NUMEROS
           suma += num;
         }
+        //Mostramos los resultados por pantalla
         System.out.print("\nEl numero maximo Par es igual a " + maxPar + ".");
         System.out.print("\nLa media de todos los numeros es igual a " + suma/50 + ".");
         System.out.println("\nEl numero minimo Impar es igual a " + minImpar + ".");
