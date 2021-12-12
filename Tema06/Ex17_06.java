@@ -12,38 +12,35 @@ public class Ex17_06 {
     public static void main(String[] args) {
         System.out.println("[Programa que muestra una pecera y un pez en su interior]");
         System.out.println("---------------------------------------------------------");
-        System.out.println("Introduzca la altura de la pecera, por favor: ");
-        int alturaIntroducida = Integer.parseInt(System.console().readLine());
-        System.out.println("Introduzca la anchura de la pecera, por favor: ");
-        int anchuraIntroducida = Integer.parseInt(System.console().readLine());
-
-        int position = 0;
-        int positionPez = (int)(Math.random()*(alturaIntroducida - 2)*(anchuraIntroducida - 2));
-
-        //PARTE SUPERIOR DE LA PECERA
-        for (int p = 0; p < anchuraIntroducida; p++) {
-            System.out.print(" * ");
+        System.out.print("Introduce la altura del rectangulo por teclado(min. 4): ");
+        int altura = Integer.parseInt(System.console().readLine()) ;
+        System.out.print("Introduce la anchura del rectangulo por teclado(min. 4): ");
+        int anchura = Integer.parseInt(System.console().readLine()) ;
+        int posicionPez = (int)(Math.random()*((altura -2)*(anchura-2)))+1;;
+        int posicion = 0;
+        // Parte de Arriba de la pecera
+        for (int i = 0; i < anchura -1; i++){
+        System.out.print("*");
         }
-
-        //PARTE CENTRAL DE LA PECERA
-        for(int i = 2; i <= alturaIntroducida; i++) {
-            System.out.print("*"); // parte izquierda de la pecera
-            for(int j = 2; j <= anchuraIntroducida; j++) {
-                if (position == positionPez) {
+        //Los laterales de la pecera
+        for (int i = 2; i < altura; i++ ){
+        System.out.println("");
+        System.out.print("*");
+            for (int aux = 2; aux <= anchura -2;aux++){
+            //Si la posicion es igual a la posicion del pez pues que lo pinte
+            if (posicion == posicionPez){
                 System.out.print("&");
-                } else {
-                    System.out.print(" ");
-                }
-                    position++;
-            } // for j
-                System.out.println("*"); // parte derecha de la pecera
+            }else{
+                System.out.print(" ");
             }
-
-
-            //PARTE INFERIOR DE LA PECERA
-            for(int i = 0; i <= anchuraIntroducida; i++) {
-                System.out.print(" * ");
-                }
-        
+            posicion++; //La posicion ira aumentando hasta que coincida con la posicion del pez
+            }
+        System.out.print("*");
+        }
+        System.out.println("");
+        //Parte de abajo de la pecera
+        for (int i = 1; i < anchura; i++){
+        System.out.print("*");
+        }
     }
 }
