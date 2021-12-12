@@ -15,16 +15,17 @@ La cuba tiene una capacidad de 3 litros y contiene 2 litros de agua.
 public class Ex20_06 {
     public static void main(String[] args) {
         System.out.println("Programa que dibuja una Cuba con cierta cantidad de agua");
-        System.out.println("Introduce la capacidad maxima de tu cuba");
+        System.out.print("Introduce la capacidad maxima de tu cuba: ");
         //DEFINO LA CAPACIDAD Y LOS LITROS QUE SE VAN O NO INCLUIR EN LA CUBA
         int capacidad = Integer.parseInt(System.console().readLine());
+        System.out.println();
         int litros = (int)(Math.random() * (capacidad + 1));
         //SI I ES MENOR QUE LA CAPACIDAD QUE DIBUJE LAS PAREDES
         for (int i = 1; i < capacidad; i++) {
-            //SI i ES MAYO QUE LA RESTA DE CAPACIDAD Y LITROS QUE SIGA PINTANDO LAS PAREDES SINO QUE DIBUJO EL AGUA TAMBIEN
+            //SI i ES MAYOR QUE LA RESTA DE CAPACIDAD Y LITROS QUE SIGA PINTANDO LAS PAREDES SINO QUE DIBUJO EL AGUA TAMBIEN
             if (i < (capacidad - litros)) {
                 System.out.println("#    #");
-                } else {
+                } else { // Sino pues que dibuje la cuba llena en esa linea
                 System.out.println("#====#");
                 }
         }
