@@ -16,24 +16,24 @@ public class Ex28_06 {
         //NUMERO ALEATORIO ENTRE EL 3 Y 13
         int altura=(int)(Math.random()* 13)+3;
         //
-        if ((altura %2 )==0){
+        if ((altura % 2 )==0){ //Si la altura es divisible entre dos se suma 1 a la altura
         altura++;
         }
-        // MIENTRAS I SEA MENOR O IGUAL QUE ALTURA
+        // MIENTRAS I SEA MENOR O IGUAL QUE ALTURA.
         for (int i = 1; i <= altura; i++ ){
-            //SI I ES IGUAL A 1 SE PINTA LA PARTE DE ARRIBA
+            //SI I ES IGUAL A 1 SE PINTA LA PARTE DE ARRIBA.
         if (i == 1){
             System.out.print("*    *   ****    *        **** ");
-            //SI I ES MENOS QUE ALTURA Y ESTA DIVISIBLE ENTRE 3 SE PINTA LA PARTE CONTINUA A LA DE ARRIBA
+            //SI I ES MENOS QUE ALTURA Y ESTA DIVISIBLE ENTRE 3 SE PINTA LA PARTE CONTINUA A LA DE ARRIBA.
         }else if (i < altura /2 +1){
             System.out.print("*    *  *    *   *       *    * ");
-            //SI I IGUAL ALTURA Y ESTA DIVISIBLE ENTRE 3 SE PINTA LA PARTE DEL MEDIO
+            //SI I IGUAL ALTURA Y ESTA DIVISIBLE ENTRE 3 SE PINTA LA PARTE DEL MEDIO.
         }else if (i == altura /2 +1){
             System.out.print("******  *    *   *       ****** ");
-            //SI I MAYOUR QUE ALTURA ENTRE DOS Y I MENOS QUE ALTURA SE PINTA LA PARTE DE EN MEDIO PARA ABAJO
+            //SI I MAYOUR QUE ALTURA ENTRE DOS Y I MENOS QUE ALTURA SE PINTA LA PARTE DE EN MEDIO PARA ABAJO.
         }else if ((i > altura /2)&&(i < altura)){
             System.out.print("*    *  *    *   *       *    * ");
-              //SI I IGUAL A ALTURA SE PINTA LA PARTE DE ABAJO Y SE FINALIZA
+              //SI I IGUAL A ALTURA SE PINTA LA PARTE DE ABAJO Y SE FINALIZA.
         }else if (i == altura ){
             System.out.print("*    *   ****    ******  *    * ");
         }
