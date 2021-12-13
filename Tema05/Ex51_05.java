@@ -1,22 +1,44 @@
+/**
+    El gusano numérico se come los dígitos con forma de rosquilla, o sea , el 0 y 
+ * el 8(todos los que encuentre).Realiza un programa que muestre un número antes
+ * y después de haber sido comido por el gusano. Si el animalito no se ha comido
+ * ningún dígito, el programa debe indicarlo.
+ * 
+ * @author Alberto Parra Toval
+ */
 public class Ex51_05 {
     public static void main(String[] args) {
-        System.out.println("[Programa que dice si un numero es capicua]");
-        System.out.print("Introduce el numero: ");
-        long numeroIntroducido = Integer.parseInt(System.console().readLine());
-        long numero = numeroIntroducido;
+        System.out.print("Introduzca un número entero (mayor que cero): ");
+        long numero = Integer.parseInt(System.console().readLine()) ;
+        int numerosComidos = 0;
+        long resultado = 0;
+        int digito = 0;
+        int longitud= 0;
         long voltear = 0;
-        // Le doy la vuelta al nuemro 
+        /**Volteo el numerp**/
         while (numero > 0){
-            voltear = (voltear * 10) + (numero % 10);
+        
+            voltear = (voltear * 10) + (numero %10);
             numero /= 10;
+            longitud++;
         }
-
-        if (voltear == numeroIntroducido ) { // Si es igual es capicua
-            System.out.println("El numero "+ numeroIntroducido + " es capicua");
-        } else{ // Sino es igual no es capicua
-            System.out.println("El numero " + numeroIntroducido + " no es capicua");
+        /**Recorro el numero**/
+        for (int i = 0; i < longitud; i++){
+            digito = (int)(voltear %10);
+            if ((digito == 8)||(digito == 0)){
+                numerosComidos++;
+            }else{
+                resultado = (resultado * 10) + digito;
+            }
+        
+            voltear/=10;
+        }
+        
+        if (numerosComidos == 0){
+            System.out.println("El gusano numérico no se ha comido ningún dígito.");
+        }else{
+            System.out.println("Después de haber sido comido por el gusano numérico se queda en "+resultado);
         }
     }
 }
-    
 
