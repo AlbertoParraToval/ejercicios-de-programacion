@@ -10,50 +10,31 @@
  */
 public class Ex20_07 {
     public static void main(String[] args) {
-        int [] numero = new int[10];
-        System.out.print("Introduce 10 numeros porfavor : \n");
-        for (int i = 0; i < 10;i++){
-            numero[i] = Integer.parseInt(System.console().readLine());
+        System.out.print("Introduzca el número total de nombres de reyes: ");
+        int numReyes = Integer.parseInt(System.console().readLine()); //Introducir el nuemro de relles
+        String [] nomRey = new String[numReyes];
+        int [] auxiliar = new int[numReyes];
+        System.out.print("Vaya introduciendo los nombres de los reyes y pulsando INTRO. \n"); 
+        for (int i = 0; i < numReyes;i++){ // Se repite hasta el numero de reyes que le hayamos dicho que es la long del array
+            nomRey[i] = System.console().readLine();
         }
-        //Muestro el indice 
-        for (int i = 0; i < 10;i++){
-            System.out.printf("%3d|",i);
+        int contadorRey=0; 
+        for (int i = 0; i < numReyes  ;i++){ // Mientras sea menor al numero de reyes
+            for (int indice = 0; indice < numReyes;indice++){
+                if (nomRey[i].equals(nomRey[indice])){ 
+                    if (i == 0){ 
+                    contadorRey= i + 1;
+                    auxiliar[i]=contadorRey = i + 1;
+                }else{
+                    auxiliar[i]= i;
+                    }
+                }
+            }
         }
-        System.out.println("");
-        //Muestra el valor del array inicial
-        int indice = 0;
-        while  (indice < 10){
-            System.out.printf("%3d|",numero[indice]);
-            indice++;
+        
+        System.out.println("Los reyes introducidos son: ");
+        for (int i = 0; i < numReyes;i++){ // NQue se muestren los reyes que hemos introducido
+            System.out.println(nomRey[i]+" "+ auxiliar[i] +"º");
+            }
         }
-        System.out.println("");
-        System.out.println("");
-        //El usuario debe introducir la posicion finlal y inicial
-        System.out.print("Introduzca la posicion Inicial : \n");
-        int inicial = Integer.parseInt(System.console().readLine());
-        System.out.print("Introduzca la posicion Final : \n");
-        int finall = Integer.parseInt(System.console().readLine());
-    
-        //Muestro el indice 
-        for (int i = 0; i < 10;i++){
-            System.out.printf("%3d|",i);
-        }
-        System.out.println("");
-    
-    
-        //Muestro el valor del array final
-        indice = 0; 
-        System.out.printf("%3d|",numero[9]);
-        do{
-        indice++;
-        if (inicial == indice){         //Si el numero inicial coincide con el indice que se sustituya por el ultimo nuemro
-            System.out.printf("%3d|",numero[finall]); 
-        }else if (finall == indice){    // Sino que se se sustituya con el prier nuemro
-            System.out.printf("%3d|",numero[inicial]);
-        }else {
-            System.out.printf("%3d|",numero[(indice-1)]); //Pintamos los demas numeros
-        }
-        }while (indice < 9);
-    
     }
-}
