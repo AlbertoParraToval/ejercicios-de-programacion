@@ -1,59 +1,51 @@
-public class Ex34_05 {
+/**
+ *Escribe un programa que permita partir un número introducido por teclado en
+ * dos partes. Las posiciones se cuentan de izquierda a derecha empezando por
+ * el 1. Suponemos que el usuario introduce correctamente los datos, es decir,
+ * el número introducido tiene dos dígitos como mínimo y la posición en la que
+ * se parte el número está entre 2 y la longitud del número. No se permite en
+ * este ejercicio el uso de funciones de manejo de String (por ej. para extraer
+ * subcadenas dentro de una cadena).
+ * 
+ * @author Alberto Parra Toval
+ */
+
+public class Ex43_05 {
     public static void main(String[] args) {
-        System.out.println("El programa pide 2 y luego los mezcle en dos numeros diferentes los digitos pares y los impares.");
+        System.out.println("Escribe un programa que permita partir un número introducido por teclado en dos partes");
         System.out.print("Introduce un numero entero positivo por teclado: ");
-        long numero1 = Integer.parseInt(System.console().readLine()) ;
-        System.out.print("Introduce otro numero entero positivo por teclado: ");
-        long numero2 = Integer.parseInt(System.console().readLine()) ;
-        
-        long voltear = 0;
-        long voltearNum2 = 0;
+        int numero1 = Integer.parseInt(System.console().readLine()) ;
+        System.out.print("Introduce un numero entero positivo para partir el numero: ");
+        int posicion = Integer.parseInt(System.console().readLine()) ;
+        int voltear = 0;
         int longitud = 0;
-        
+        int digito = 0;
+        int contador = 0;
+        int numPrimeraParte = 0;
+        int numeroSegundaParte = 0;
         if ( numero1 == 0){
-            longitud = 1;
+        contador=1;
         }
-        
+    
         /**Volteo el primer numero**/
         while (numero1 > 0){
-            voltear = (voltear * 10) + (numero1 %10);
-            numero1 /= 10;
-            longitud++;
+        voltear = (voltear * 10) + (numero1 %10);
+        numero1 /= 10;
+        longitud++;
         }
-        /** Volteo el segundo numero**/
-        while (numero2 > 0){
-            voltearNum2 = (voltearNum2 * 10) + (numero2 %10);
-            numero2 /= 10;
-        }
-
-
-        long numeroPares = 0;
-        long numeroImpares = 0;
-        int digito = 0;
-        /**recorro los numeros volteados para sacar ambos resultados**/
+    
+        //Partir el numero
         for (int a = 0; a < longitud; a++){
-            //Separo los numeros impares y los pares del primer numero
-            digito = (int)(voltear %10);
-            
-            if ((digito % 2)==0){
-            numeroPares = digito + (numeroPares * 10);
-            }else{
-            numeroImpares = digito + (numeroImpares * 10);
-            }
-            // Separo los numero impares y los pares del segudno numero
-            digito = (int)(voltearNum2 % 10);
-        
-            if ((digito % 2)== 0){
-                numeroPares = digito + (numeroPares * 10);
-            }else {
-            numeroImpares = digito + (numeroImpares * 10);
-            }
-            
-            voltear = voltear /10; //Volteo primer num
-            voltearNum2 = voltearNum2 /10; //Volteo segundo num
+        digito = (int)(voltear %10);
+        //Partir la primera parte del numero
+        if (a < posicion - 1){
+        numPrimeraParte = digito + (numPrimeraParte * 10);
+        //Partir la segunda parte del numero
+        }else if (a >= posicion -1 ){
+        numeroSegundaParte = digito + (numeroSegundaParte * 10);
         }
-        //Muestro los resultados pro pantalla
-        System.out.println("El numero formado por los digitos pares es: " + numeroPares);
-        System.out.println("El numero formado por los digitos impares es: " + numeroImpares);
+        voltear/=10;
+        }
+        System.out.println("Los números partidos son el "+ numPrimeraParte +" y el "+ numeroSegundaParte +".");
     }
 }
