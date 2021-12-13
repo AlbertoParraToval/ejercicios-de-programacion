@@ -1,43 +1,28 @@
 /**
-    Escribe un programa que diga cuántos dígitos pares y cuántos dígitos impares
- * hay dentro de un número. Se recomienda usar long en lugar de int ya que el
- * primero admite números más largos.
+    Realiza un programa que pinte un triángulo relleno tal como se muestra en los
+ * ejemplos. El usuario debe introducir la altura de la figura.
  * 
  * @author Alberto Parra Toval
  */
 public class Ex56_05 {
   public static void main(String[] args) {
-    System.out.println("El programa pide 2 y luego los mezcle en dos números diferentes los dígitos pares y los impares.");
-    System.out.print("Por favor, introduzca un número entero positivo: ");
-    long numeroIntroducido = Integer.parseInt(System.console().readLine()) ;
-    long numero = numeroIntroducido;
-    long voltear = 0;
-    int longitud = 0;
-    if ( numero == 0){
-      longitud=1;
-      }
-    
-    ///Volteo el numero 
-    while (numero > 0){
-      
-      voltear = (voltear * 10) + (numero %10);
-      numero /= 10;
-      longitud++;
+    System.out.print("Introduzca la altura de la figura: ");
+    int altura = Integer.parseInt(System.console().readLine()) ;
+    int numEspacios = 1;
+    for (int i = 0; i < altura;i++){
+      System.out.print("*");
     }
-    long numeroPares = 0;
-    long numeroImpares = 0;
-    int digito = 0;
-    //Recorro el numero para obtener el que quiero
-    for (int a = 0; a < longitud; a++){
-      digito = (int)(voltear %10);
-      if ((digito % 2)==0){
-        numeroPares++;
-      }else{
-        numeroImpares++;
+    System.out.println("");
+    while (altura -1 > 0){
+      for (int i = 0; i < numEspacios; i++){ // Mientras i sea mayor a numero de espacios
+        System.out.print(" ");
       }
-      voltear/=10;
+      for (int i = 0; i < altura -1; i++){ // Pintar la altura
+        System.out.print("*");
+      }
+      System.out.println("");
+      altura--; // Para salir del bucle
+      numEspacios++;
     }
-    System.out.println("El "+ numeroIntroducido +" contiene "+ numeroPares +" dígitos pares y "+numeroImpares+" dígitos impares.");
-  
   }
 }
