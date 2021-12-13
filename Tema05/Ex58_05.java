@@ -1,6 +1,6 @@
 /**
  *Realiza un programa que calcule la media de los dígitos que contiene un número
- * entero introducido por teclado.
+ * entero introducido por teclado
  * 
  * @author Alberto Parra Toval
  */
