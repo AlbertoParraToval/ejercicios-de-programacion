@@ -6,17 +6,27 @@ y viceversa.
  */
 public class Ex10_07 {
     public static void main(String[] args) {
-        System.out.println("[Programa que muestra y asigna valores a una tabla que se muestra acontinuación donde el primer numero es el ultimo en mostrarse ]");
-        //DEFINO EL TAMAÑO DE MI ARRAY 
-        int num[] = new int[11];
-        //lE PIDO AL USUARIO QUE INTRODUZCA 10 NUMEROS
-        System.out.println("Introduce 10 numero y pulsa INTRO: ");
-        for (int i = 0; i < num.length; i++) {
-            num[i] = Integer.parseInt(System.console().readLine());
+        System.out.print("El programa pasa los numeros pares a primeras posiciones.\n");
+        int [] numero = new int[20]; // Longitud de mi array
+        for (int i = 0; i < 20;i++){
+            numero[i] = (int)(Math.random()*101);; //Numero de veces que se genra un numero aleatorio
         }
-        //MUESTRO LOS NUMEROS EN PANTALLA DONDE EL ULTIMO ES EL PRIMERO Y EL PRIMERO ES MOSTRADO EL ULTIMO.
-        for (int j = 10; j < num.length; j--) {
-            System.out.println("Numero " + j + " = " + num[j]);
+        //Solo pinto los pares para que salga los primeros
+        int indice = 0;
+        while  (indice < 20){ 
+            if ((numero[indice] % 2)== 0){ //Compruebo si es par
+            System.out.print(numero[indice]+" ");
+            
+            }
+            indice++;
+        }
+        //pinto los impares despues de pintar los pares
+        indice = 0;
+        while  (indice < 20){
+            if ((numero[indice] % 2)!= 0){ //Compruebo si no es par
+            System.out.print(numero[indice]+" ");
+            }
+            indice++;
         }
     }
 }
