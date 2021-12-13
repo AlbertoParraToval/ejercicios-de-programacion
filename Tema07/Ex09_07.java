@@ -1,25 +1,26 @@
-/** Define un array de 12 números enteros con nombre num y asigna los valores
-según la tabla que se muestra a continuación. Muestra el contenido de todos
-los elementos del array. ¿Qué sucede con los valores de los elementos que no
-han sido inicializados?
+/** Realiza un programa que pida 8 números enteros y que luego muestre esos
+ * números junto con la palabra par o impar según proceda.
  *
  * @author Alberto Parra Toval
  */
 public class Ex09_07 {
     public static void main(String[] args) {
-        System.out.println("[Programa que muestra y asigna valores a una tabla que se muestra acontinuación ]");
-        //DEFINO MI ARRAY DE SIMBOLOS = 10
-        String[] simbole = new String[10];
-        simbole[0] = "a"; 
-        simbole[1] = "x";
-        simbole[4] = "@" ;
-        simbole[6] = "''";
-        simbole[7] = "'+'";
-        simbole[8] = "Q";
-        //MUESTRO POR PANTALLA EL ARRAY Y LOS INDICES NO DEFINIDOS SE DETERMINAN COMO NULL
-        for (int i = 0; i < simbole.length; i++) {
-            System.out.println("Indice:" + i + ":" + simbole[i]);
+        System.out.print("Introduce 8 numeros y el programa te muestra el los impares y pares:\n");
+        int [] numero = new int[8]; // Longitud de mi array 
+        for (int i = 0; i < 8;i++){ // Numero de veces que se ha generado numero aleatorios que se guardan en mi array
+        System.out.printf("%2dº numero: ",(i + 1));
+        numero[i] = Integer.parseInt(System.console().readLine());
         }
+        int indice = 0;
+        while  (indice < 8){
+        if ((numero[indice] % 2)== 0){ //Comprobamos si es par o impar
+            System.out.println(numero[indice]+"Par ");
+        
+        }else {
+            System.out.println(numero[indice]+"Impar ");
+        }
+        indice++; //Para que poco a poco se vaya del bucle
+        } 
     }
 }
 
