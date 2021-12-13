@@ -1,59 +1,51 @@
+/**
+ * Ejercicio: 49
+ * Realiza un programa que calcule el máximo, el mínimo y la media de una serie
+ * de números enteros positivos introducidos por teclado. El programa terminará
+ * cuando el usuario introduzca un número primo. Este último número no se
+ * tendrá en cuenta en los cálculos. El programa debe indicar también cuántos
+ * números ha introducido el usuario (sin contar el primo que sirve para salir)
+ * 
+ * @author Alberto Parra Toval
+ * 
+ * 
+ */
 public class Ex49_05 {
     public static void main(String[] args) {
-        System.out.println("El programa pide 2 y luego los mezcle en dos numeros diferentes los digitos pares y los impares.");
-        System.out.print("Introduce un numero entero positivo por teclado: ");
-        long numero1 = Integer.parseInt(System.console().readLine()) ;
-        System.out.print("Introduce otro numero entero positivo por teclado: ");
-        long numero2 = Integer.parseInt(System.console().readLine()) ;
-        
-        long voltear = 0;
-        long voltearNum2 = 0;
-        int longitud = 0;
-        
-        if ( numero1 == 0){
-            longitud = 1;
-        }
-        
-        /**Volteo el primer numero**/
-        while (numero1 > 0){
-            voltear = (voltear * 10) + (numero1 %10);
-            numero1 /= 10;
-            longitud++;
-        }
-        /** Volteo el segundo numero**/
-        while (numero2 > 0){
-            voltearNum2 = (voltearNum2 * 10) + (numero2 %10);
-            numero2 /= 10;
-        }
-
-
-        long numeroPares = 0;
-        long numeroImpares = 0;
-        int digito = 0;
-        /**recorro los numeros volteados para sacar ambos resultados**/
-        for (int a = 0; a < longitud; a++){
-            //Separo los numeros impares y los pares del primer numero
-            digito = (int)(voltear %10);
-            
-            if ((digito % 2)==0){
-            numeroPares = digito + (numeroPares * 10);
-            }else{
-            numeroImpares = digito + (numeroImpares * 10);
+        System.out.print("Por favor, vaya introduciendo números enteros positivos. Para terminar, introduzca un número primo: ");
+        int contador=0;
+        int maxNum = 0;
+        int menorNum = 0;
+        int sumanumeros = 0;
+        boolean esPrimo; 
+        do{
+            int numero = Integer.parseInt(System.console().readLine()) ;
+            esPrimo = true; 
+            for (int i=2; i < numero; i++){ //Comprobamos dividimos entre i para saber si es primo 
+            if ((numero % i) == 0){
+                esPrimo = false;
             }
-            // Separo los numero impares y los pares del segudno numero
-            digito = (int)(voltearNum2 % 10);
-        
-            if ((digito % 2)== 0){
-                numeroPares = digito + (numeroPares * 10);
-            }else {
-            numeroImpares = digito + (numeroImpares * 10);
             }
-            
-            voltear = voltear /10; //Volteo primer num
-            voltearNum2 = voltearNum2 /10; //Volteo segundo num
+            if (!esPrimo){ // Sino es primo 
+            sumanumeros = numero + sumanumeros;
+            contador++;
+            if (numero > maxNum){ // Sino es primo y tambien el num es mayor que el max
+            maxNum=numero;
+            }
+            if(contador == 1){
+                menorNum=numero;
+                }
+            if (numero < menorNum){
+            menorNum=numero;
+                }
+            }
+
+        }while (!esPrimo); //Mientras no sea primo
+        System.out.println("Ha introducido "+ contador +" números no primos.");
+        System.out.println("Máximo: "+maxNum);
+        System.out.println("Mínimo: "+menorNum);
+        double media = (double)(maxNum+menorNum)/(double)contador;
+        System.out.println("Media: "+media);
         }
-        //Muestro los resultados pro pantalla
-        System.out.println("El numero formado por los digitos pares es: " + numeroPares);
-        System.out.println("El numero formado por los digitos impares es: " + numeroImpares);
     }
-}
+    
