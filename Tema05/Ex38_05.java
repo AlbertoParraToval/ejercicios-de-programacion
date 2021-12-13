@@ -1,7 +1,7 @@
 /**
- * Escribe un programa que muestre por pantalla todos los números enteros positi
- * -vos menores a uno leído por teclado que no sean divisibles entre otro también
- * leído de igual forma.
+ * Realiza un programa que pinte un reloj de arena relleno hecho de asteriscos. 
+ * El programa debe pedir la altura. Se debe comprobar que la altura sea un número
+ * impar mayor o igual a 3, en caso contrario se debe mostrar un mensaje de error.
  * 
  * @author Alberto Parra Toval
  * 
@@ -9,23 +9,60 @@
  */
 public class Ex29_05 {
     public static void main(String[] args) {
-      System.out.println("A partir de un numero muestra los menores a ese num y que no son divisibles por el num elegido");
-      //Pedimos al usuario un divisor y un numero
-      System.out.print("Introduce un numero por teclado: ");
-      int num= Integer.parseInt(System.console().readLine()) ;
-      System.out.print("Introduce un divisor por teclado: ");
-      int div = Integer.parseInt(System.console().readLine()) ;
-      //Variable para comrpobar si es divisible
-      int comprobador = 0;
-      // Mientras el num introducido sea mayor a 0
-      while (num > 0){
-        num--;
-        comprobador = num % div;
-        //Si comprobado no es igual a 0 mostramos esos numeros ya que no son divisibles por el introducido
-        if (comprobador != 0){
-          System.out.print(num +" ");
-          }
+      System.out.print("Introduce la altura de la X por teclado: ");
+      int alturaIntroducida = Integer.parseInt(System.console().readLine()) ;
+      int altura =1;
+      int espaciosDelante=0;
+      int espaciosDentro= alturaIntroducida - 1;
+      // Parte de arriba de la X
+      while (altura < alturaIntroducida /2 + 1){
+      
+        for (int i=1; i <= espaciosDelante;i++ ){
+          System.out.print(" ");
+        }
+        System.out.print("*");
+        for (int i = 1; i < espaciosDentro; i++ ){
+        System.out.print("*");
+        }
+        System.out.print("*");
+        System.out.println("");
+      
+        altura++;
+        espaciosDelante++;
+        espaciosDentro-=2;
+      
+    }
+
+      //Parte del centro de la X
+      if (altura == alturaIntroducida /2 +1){
+        for (int i = 1; i <= altura-1; i++){
+          System.out.print(" ");
+        }
+        System.out.print("*");
       }
-      System.out.println(" ");
+      System.out.println("");
+    
+    //Parte inferior de la X
+      altura =1;
+      espaciosDelante=alturaIntroducida /2 -1;
+      espaciosDentro= 2;
+    
+      while (altura < alturaIntroducida /2 + 1){
+      
+      for (int i=1 ; i <= espaciosDelante;i++ ){
+        System.out.print(" ");
+        }
+        System.out.print("*");
+        for (int i = 1; i < espaciosDentro; i++ ){
+          System.out.print("*");
+        }
+        System.out.print("*");
+        System.out.println("");
+      
+        altura++;
+        espaciosDelante--;
+        espaciosDentro+=2;
+      
     }
   }
+}
