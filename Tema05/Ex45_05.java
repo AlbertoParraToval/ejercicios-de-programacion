@@ -1,4 +1,4 @@
-public class Ex36_05 {
+public class Ex45_05 {
     public static void main(String[] args) {
         System.out.println("Escribe un programa que cambie un dígito dentro de un número dando la posición y el valor nuevo.");
         System.out.print("Introduce un numero entero positivo por teclado: ");
