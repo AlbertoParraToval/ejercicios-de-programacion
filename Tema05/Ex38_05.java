@@ -7,7 +7,7 @@
  * 
  * 
  */
-public class Ex29_05 {
+public class Ex38_05 {
     public static void main(String[] args) {
       System.out.print("Introduce la altura de la X por teclado: ");
       int alturaIntroducida = Integer.parseInt(System.console().readLine()) ;
