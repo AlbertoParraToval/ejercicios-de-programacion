@@ -1,40 +1,46 @@
+/**
+ * 
+ * Escribe un programa que pinte por pantalla un par de calcetines, de los que
+ * se ponen al lado del árbol de Navidad para que Papá Noel deje sus regalos.
+ * El usuario debe introducir la altura. Suponemos que el usuario introduce una
+ * altura mayor o igual a 4. Observa que la talla de los calcetines y la distancia
+ * que hay entre ellos (dos espacios) no cambia, lo único que varía es la altura
+ * 
+ * @author Alberto Parra Toval
+ * 
+ */
 public class Ex60_05 {
     public static void main(String[] args) {
-        System.out.println("Escribe un programa que cambie un dígito dentro de un número dando la posición y el valor nuevo.");
-        System.out.print("Introduce un numero entero positivo por teclado: ");
-        long numero1 = Integer.parseInt(System.console().readLine()) ;
-        System.out.print("Introduce un numero entero positivo para partir el numero: ");
-        int posicion = Integer.parseInt(System.console().readLine()) ;
-        System.out.print("Introduce un numero entero positivo para sustituir en la posicion: ");
-        int sustituirNum = Integer.parseInt(System.console().readLine()) ;
-        long voltear = 0;
-        int longitud = 0;
-        int digito = 0;
-        int numPart1 = 0;
-        int numResultante = 0;
-        
-            /**Volteo el primer numero**/
-        while (numero1 > 0){
-        
-            voltear = (voltear * 10) + (numero1 %10);
-            numero1 /= 10;
-            longitud++;
-        }
-            /**Recorro el numero**/
-            for (int a = 0; a < longitud; a++){
-            digito = (int)(voltear %10);
-            /**Cuando llega a la posicion sustituyo el numero**/
-            if (a < posicion -1){
-                numPart1 = (numPart1 * 10) +digito;
-            }else if (a == posicion-1){
-                digito=sustituirNum;
-                numResultante = digito + (numResultante * 10);
-            }else if (a > posicion -1){
-                numResultante = digito + (numResultante * 10);
+        System.out.print("Introduzca la altura de la figura (mayor o igual a 4): ");
+    int altura = Integer.parseInt(System.console().readLine()) ;
+    int anchura = 6;
+    int base = 0;
+    int espaciosNum = 2;
+    while (altura  > 0){
+        for (int i = 0; i < anchura ; i++){
+        if (i < anchura / 2){
+            System.out.print("*");
+        }else if (( i > (anchura / 2) -1) && ( altura > 2)){
+            System.out.print(" ");
+        }else if (altura <= 2){
+            System.out.print("*");
             }
-            voltear/=10;
-            }
-            System.out.println("El número resultante es "+ numPart1 +""+ numResultante +".");
         }
-    }   
+    for (int espacio = 0; espacio < espaciosNum; espacio++){
+        System.out.print(" ");
+        }
+    for (int i = 0; i < anchura ; i++){
+        if (i < anchura / 2){
+            System.out.print("*");
+        }else if (( i > (anchura / 2) -1) && ( altura > 2)){
+            System.out.print(" ");
+        }else if (altura <= 2){
+            System.out.print("*");
+            }
+        }
+        System.out.println("");
+        altura--;
+        }
+    }
+}  
 
