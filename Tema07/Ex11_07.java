@@ -7,7 +7,7 @@ columnas.
  *
  * @author Alberto Parra Toval
  */
-public class Ex04_07 {
+public class Ex11_07 {
     public static void main(String[] args) {
         System.out.println("\nA continuación se muestran en tres columnas, un numero aleatorio entre 0 y 100, su cuadrado y su cubo:\n");
         //DEFINO LA LONGITUD DE LOS ARRAY

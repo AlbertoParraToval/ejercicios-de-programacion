@@ -5,7 +5,7 @@ han sido inicializados?
  *
  * @author Alberto Parra Toval
  */
-public class Ex06_07 {
+public class Ex13_07 {
     public static void main(String[] args) {
         System.out.println("[Programa que muestra y asigna valores a una tabla que se muestra acontinuación ]");
         

@@ -5,7 +5,7 @@ han sido inicializados?
  *
  * @author Alberto Parra Toval
  */
-public class Ex02_07 {
+public class Ex09_07 {
     public static void main(String[] args) {
         System.out.println("[Programa que muestra y asigna valores a una tabla que se muestra acontinuación ]");
         //DEFINO MI ARRAY DE SIMBOLOS = 10

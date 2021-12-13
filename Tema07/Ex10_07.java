@@ -4,7 +4,7 @@ y viceversa.
  *
  * @author Alberto Parra Toval
  */
-public class Ex03_07 {
+public class Ex10_07 {
     public static void main(String[] args) {
         System.out.println("[Programa que muestra y asigna valores a una tabla que se muestra acontinuación donde el primer numero es el ultimo en mostrarse ]");
         //DEFINO EL TAMAÑO DE MI ARRAY 

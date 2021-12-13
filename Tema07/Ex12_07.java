@@ -4,7 +4,7 @@ máximo y del mínimo respectivamente.
  *
  * @author Alberto Parra Toval
  */
-public class Ex05_07 {
+public class Ex12_07 {
     public static void main(String[] args) {
         System.out.println("[Programa que pida 10 numeros y luego mostrar el max y el min]");
         System.out.println("Introduzca 10 numeros y pulse INTRO: ");
