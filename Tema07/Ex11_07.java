@@ -1,32 +1,73 @@
-/** Define tres arrays de 20 números enteros cada una, con nombres numero, cuadrado
-y cubo. Carga el array numero con valores aleatorios entre 0 y 100. En el array
-cuadrado se deben almacenar los cuadrados de los valores que hay en el array
-numero. En el array cubo se deben almacenar los cubos de los valores que hay en
-numero. A continuación, muestra el contenido de los tres arrays dispuesto en tres
-columnas.
+/** Realiza un programa que pida 10 números por teclado y que los almacene en
+ * un array.A continuación se mostrará el contenido de ese array junto al índice
+ * (0 – 9) utilizando para ello una tabla .  Seguidamente el programa pasará los 
+ * primos a las primeras posiciones, desplazando el resto de números (los que no
+ * son primos) de tal forma que no se pierda ninguno.Al final se debe mostrar el
+ * array resultante.
  *
  * @author Alberto Parra Toval
  */
 public class Ex11_07 {
     public static void main(String[] args) {
         System.out.println("\nA continuación se muestran en tres columnas, un numero aleatorio entre 0 y 100, su cuadrado y su cubo:\n");
-        //DEFINO LA LONGITUD DE LOS ARRAY
-        int[] num = new int[20];
-        int[] square = new int[20];
-        int[] cube = new int[20];
-        int i;
-        //METO EN EL FOR LOS 3 ARRAYS COMENZANDO POR EL ARRAY NUMERO
-        for (i = 0; i < 20; i++) {
-            num[i] = (int)(Math.random()*101);
-            square[i] = num[i] * num[i];
-            cube[i] = square[i] * num[i];
+        System.out.print("El programa te muestra el los primos primeros.\n");
+        int [] numero = new int[10]; //Longitud de mi array
+        System.out.print("Introduce 10 numeros porfavor : \n");
+        for (int i = 0; i < 10;i++){
+            numero[i] = Integer.parseInt(System.console().readLine());
         }
-        //MUESTRO LOS DATOS EN PANTALLA 
-        System.out.println("| num  | square  |  cube |\n---------------------------");
-        for (i = 0; i < 20; i++) {
-            System.out.printf("| %4d | %7d |%6d |\n", num[i], square[i], cube[i]);
+        //Muestra el indice del array
+        for (int i = 0; i < 10;i++){
+        System.out.printf("%3d|",i); 
+        }
+        System.out.println("");
+        
+        //Muestra el valor del array inicial
+        int indice = 0;
+        while  (indice < 10){ 
+        System.out.printf("%3d|",numero[indice]);
+        indice++;
+        }
+        System.out.println("");
+        System.out.println("");
+    
+        //Muestra el indice del array
+        for (int i = 0; i < 10;i++){
+        System.out.printf("%3d|",i);
+        }
+        System.out.println("");
+        
+        //El array solo con los primos
+        indice = 0; 
+        boolean esPrimo; 
+        do{
+        esPrimo = true; 
+        for (int i=2; i < numero[indice]; i++){
+            if ((numero[indice] % i) == 0){
+            esPrimo = false;
+            }
         }
         
+        if (esPrimo){
+        System.out.printf("%3d|",numero[indice]);
+        }
+        indice++;
+        }while (indice < 10);
+    
+        //El array solo con los no primos
+        indice = 0; 
+        do{
+        esPrimo = true; 
+        for (int i=2; i < numero[indice]; i++){
+            if ((numero[indice] % i) == 0){
+            esPrimo = false;
+            }
+        }
+        
+        if (!esPrimo){
+            System.out.printf("%3d|",numero[indice]);
+        }
+        indice++;
+        }while (indice < 10);
     }
 }
-
