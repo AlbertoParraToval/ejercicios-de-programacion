@@ -1,33 +1,36 @@
 /**
- *  Escribe un programa que pida un número entero positivo por teclado y que mues
- * -tre a continuación los 5 números consecutivos a partir del número introducido
- * Al lado de cada número se debe indicar si se trata de un primo o no.
+ *   Realiza un programa que pinte un triángulo hueco tal como se muestra en los
+ * ejemplos. El usuario debe introducir la altura de la figura.
 .
 
  * @author Alberto Parra Toval
  */
 public class Ex57_05 {
   public static void main(String[] args) {
-    System.out.println("El programa calcula el factorial de un número entero leído por teclado.");
-    System.out.print("Por favor, introduzca un número entero positivo :");
-    int numero = Integer.parseInt(System.console().readLine()) ;
-    int esPrimo = 0;
-    int contador = 0;
-    boolean NoesPrimo;
-    while (contador < 5){ //numero de veces que se repite
-      NoesPrimo=false;
-      for (int i=2; i < numero; i++){
-          if (numero % i == 0){ //Si es divisible entre si mismo y es igual a 0 = NOesPrimo es cierto
-            NoesPrimo = true;
-          }
+    System.out.print("Introduzca la altura de la figura: ");
+    int altura = Integer.parseInt(System.console().readLine()) ;
+    int numEspacios = 1;
+    for (int i = 0; i < altura;i++){
+      System.out.print("*");
+    }
+
+    System.out.println("");
+    while (altura -1 > 0){
+      for (int i = 0; i < numEspacios; i++){
+        System.out.print(" ");
       }
-      if(NoesPrimo){ //Si no es primo que muestre ese numero con el no primo
-        System.out.println(numero +" no es primo");
-      }else{
-        System.out.println(numero +" es primo"); // Sino pues que ponga es primo
+      for (int i = 0; i < altura -1; i++){
+        if ( i == altura - 2){
+          System.out.print("*");
+        }else if( i < 1 ){
+          System.out.print("*");
+        }else{
+          System.out.print(" ");
+        }
       }
-      numero++; //Para añadir numeros consecutivos
-      contador++; // Para salir del bucle
+      System.out.println("");
+      altura--;
+      numEspacios++;
     }
   }
 }
