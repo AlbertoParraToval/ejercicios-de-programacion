@@ -8,28 +8,67 @@
  */
 public class Ex18_07 {
     public static void main(String[] args) {
-        System.out.print("El programa pasa los numeros pares a primeras posiciones.\n");
-        int [] numero = new int[20]; // Longitud de mi array
-        for (int i = 0; i < 20;i++){
-            numero[i] = (int)(Math.random()*101);; //Numero de veces que se genra un numero aleatorio
-        }
-        //Solo pinto los pares para que salga los primeros
-        int indice = 0;
-        while  (indice < 20){ 
-            if ((numero[indice] % 2)== 0){ //Compruebo si es par
-            System.out.print(numero[indice]+" ");
-            
-            }
-            indice++;
-        }
-        //pinto los impares despues de pintar los pares
-        indice = 0;
-        while  (indice < 20){
-            if ((numero[indice] % 2)!= 0){ //Compruebo si no es par
-            System.out.print(numero[indice]+" ");
-            }
-            indice++;
+        int [] numero = new int[10];
+    for (int i = 0; i < 10;i++){
+        numero[i] = (int)(Math.random()*201);
+    }
+    int indice = 0;
+    /**Muestra el Valor del Array Original**/
+    System.out.print("|Indice|");
+    for (indice = 0; indice < 10; indice++){
+        System.out.printf(" %d %-1s" ,indice ,"|");
+    }
+    
+    System.out.println(" ");
+    
+    System.out.print("|Numero|");
+    for (indice = 0; indice < 10; indice++) {
+        System.out.printf("%3d%-1s" ,numero[indice] ,"|");
+    }
+    
+    System.out.println(" ");
+    
+    System.out.println(" ");
+    System.out.println("");
+    
+    /**Si es menor a 100 lo guardare en un el array menor, si es mayor a 100 lo guardare en el array mayor.**/
+    int [] menor = new int[10];
+    int [] mayor = new int[10];
+    int contadorMenor = 0;
+    int contadorMayor = 0;
+    int indice2 = 0;
+    int indice3 = 0;
+    for (indice = 0; indice < 10; indice++) {
+        if (numero[indice] <= 100){
+        menor[indice2]=numero[indice];
+        indice2++;
+        contadorMenor++;
+        }else {
+            mayor[indice3]=numero[indice];
+            indice3++;
+            contadorMayor++;
         }
     }
-}
+    System.out.println("Array resultado:");
 
+    System.out.print("|Indice|");
+    
+    for (indice = 0; indice < 10; indice++) {
+        System.out.printf(" %d %-1s" ,indice ,"|");
+    }
+    System.out.println(" ");
+    System.out.print("|Número|");
+    
+    for (indice = 0; indice < 10; indice++) {
+        if (contadorMenor > 0){
+            System.out.printf("%3d%-1s" ,menor[indice] ,"|");
+            contadorMenor--;
+        }
+        if (contadorMayor > 0){
+        System.out.printf("%3d%-1s" ,mayor[indice] ,"|");
+        contadorMayor--;
+        }
+    }
+    System.out.println(" ");
+    }
+}
