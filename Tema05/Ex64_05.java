@@ -1,4 +1,4 @@
-public class Ex61_05 {
+public class Ex64_05 {
     public static void main(String[] args) {
     System.out.println("El programa pinta por pantalla un rectángulo y el usuario puede interactuar.");
     int anchura=6;
