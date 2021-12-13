@@ -1,7 +1,9 @@
 /**
- * Realiza un programa que pinte un reloj de arena relleno hecho de asteriscos. 
- * El programa debe pedir la altura. Se debe comprobar que la altura sea un número
- * impar mayor o igual a 3, en caso contrario se debe mostrar un mensaje de error.
+ * Según cierta cultura oriental, los números de la suerte son el 3, el 7, el 8 y el 9.
+ * Los números de la mala suerte son el resto: el 0, el 1, el 2, el 4, el 5 y el 6. Un
+ * número es afortunado si contiene más números de la suerte que de la mala suerte. Re
+ * -aliza un programa que diga si un número introducido por el usuario es afortunado o
+ * no.
  * 
  * @author Alberto Parra Toval
  * 
@@ -9,60 +11,37 @@
  */
 public class Ex62_05 {
     public static void main(String[] args) {
-      System.out.print("Introduce la altura de la X por teclado: ");
-      int alturaIntroducida = Integer.parseInt(System.console().readLine()) ;
-      int altura =1;
-      int espaciosDelante=0;
-      int espaciosDentro= alturaIntroducida - 1;
-      // Parte de arriba de la X
-      while (altura < alturaIntroducida /2 + 1){
+      System.out.print("Introduzca un numero: ");
+    long NumeroIntroducido = Integer.parseInt(System.console().readLine()) ;
+    long numero = NumeroIntroducido;
+    int contadorSuerte = 0;
+    int contadorMalaSuerte=0;
+    int digito = 0;
+    int longitud= 0;
+    long voltear = 0;
+    /**Volteo el numero**/
+    while (numero > 0){
       
-        for (int i=1; i <= espaciosDelante;i++ ){
-          System.out.print(" ");
-        }
-        System.out.print("*");
-        for (int i = 1; i < espaciosDentro; i++ ){
-        System.out.print("*");
-        }
-        System.out.print("*");
-        System.out.println("");
-      
-        altura++;
-        espaciosDelante++;
-        espaciosDentro-=2;
-      
+      voltear = (voltear * 10) + (numero %10);
+      numero /= 10;
+      longitud++;
     }
-
-      //Parte del centro de la X
-      if (altura == alturaIntroducida /2 +1){
-        for (int i = 1; i <= altura-1; i++){
-          System.out.print(" ");
-        }
-        System.out.print("*");
+    /**Recorro el numero**/
+    for (int i = 0; i < longitud; i++){
+      digito = (int)(voltear %10);
+      if ((((digito == 3)||(digito == 7))||(digito == 8))||(digito == 9)){
+        contadorSuerte++;
+      }else{
+        contadorMalaSuerte++;
       }
-      System.out.println("");
-    
-    //Parte inferior de la X
-      altura =1;
-      espaciosDelante=alturaIntroducida /2 -1;
-      espaciosDentro= 2;
-    
-      while (altura < alturaIntroducida /2 + 1){
       
-      for (int i=1 ; i <= espaciosDelante;i++ ){
-        System.out.print(" ");
-        }
-        System.out.print("*");
-        for (int i = 1; i < espaciosDentro; i++ ){
-          System.out.print("*");
-        }
-        System.out.print("*");
-        System.out.println("");
-      
-        altura++;
-        espaciosDelante--;
-        espaciosDentro+=2;
-      
+      voltear/=10;
     }
+    if (contadorSuerte > contadorMalaSuerte){
+      System.out.println("El " +NumeroIntroducido+ " es un numero afortunado.");
+    }else{
+      System.out.println("El " +NumeroIntroducido+ " NO es un numero afortunado.");
+    }
+    
   }
 }
