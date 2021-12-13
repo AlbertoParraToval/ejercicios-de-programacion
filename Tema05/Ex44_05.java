@@ -1,69 +1,41 @@
 public class Ex35_05 {
     public static void main(String[] args) {
-        System.out.println("[Programa que dibuja una X]");
-        System.out.println("---------------------------");
-        System.out.print("Introduce la altura de tu X: ");
-        int alturaIntroducida =  Integer.parseInt(System.console().readLine());
-
-        int altura = 1;
-        int i = 0;
-        int espaciosInternos = alturaIntroducida - 1;
-        int espaciosPorDelante = 0;
+        System.out.println("Escribe un programa que cambie un dígito dentro de un número dando la posición y el valor nuevo.");
+    System.out.print("Introduce un numero entero positivo por teclado: ");
+    long numero1 = Integer.parseInt(System.console().readLine()) ;
+    System.out.print("Introduce un numero entero positivo para partir el numero: ");
+    int posicion = Integer.parseInt(System.console().readLine()) ;
+    System.out.print("Introduce un numero entero positivo para sustituir en la posicion: ");
+    int sustituirNum = Integer.parseInt(System.console().readLine()) ;
+    long voltear = 0;
+    int longitud = 0;
+    int digito = 0;
+    int numPart1 = 0;
+    int numResultante = 0;
     
-        if ((alturaIntroducida < 3) || (alturaIntroducida % 2 == 0)) {
-            System.out.print("Error 404, No es posible pintar la X con la altura elegida.");
-        } else {
-          // parte de arriba ////
-            while (altura < alturaIntroducida / 2 + 1) {
-            
-            // inserta espacios delante
-            for (i = 1; i <= espaciosPorDelante; i++) {
-                System.out.print(" ");
-            }
-            
-            // pinta la línea
-            System.out.print("*");
-            for (i = 1; i < espaciosInternos; i++) {
-                System.out.print(" ");
-            }
-            
-            System.out.print("*");
-            
-            System.out.println();
-            altura++;
-            espaciosPorDelante++;
-            espaciosInternos -= 2;      
-          } // while parte de arriba ///////////////////////
-        
-          // parte de abajo /////////////////////////////////////
-            espaciosInternos = 0;
-            espaciosPorDelante = alturaIntroducida / 2;
-            altura = 1;
-            
-            while (altura <= alturaIntroducida / 2 + 1) {
-            
-            // inserta espacios delante
-            for (i = 1; i <= espaciosPorDelante; i++) {
-            System.out.print(" ");
-            }
-            
-            // pinta la línea
-                System.out.print("*");
-            for (i = 1; i < espaciosInternos; i++) {
-                System.out.print(" ");
-            }
-            
-            if(altura>1) {
-                System.out.print("*");
-            }
-            
-            System.out.println();
-            altura++;
-            espaciosPorDelante--;
-            espaciosInternos+=2;
-          } // while parte de abajo ///////////////////////
+    /**Volteo el primer numero**/
+        while (numero1 > 0){
+    
+        voltear = (voltear * 10) + (numero1 %10);
+        numero1 /= 10;
+        longitud++;
         }
-    }
-}
+        /**Recorro el numero**/
+        for (int a = 0; a < longitud; a++){
+        digito = (int)(voltear %10);
     
+        /**Cuando llega a la posicion sustituyo el numero**/
+        if (a < posicion -1){
+            numPart1 = (numPart1 * 10) +digito;
+        }else if (a == posicion-1){
+            digito=sustituirNum;
+            numResultante = digito + (numResultante * 10);
+        }else if (a > posicion -1){
+        numResultante = digito + (numResultante * 10);
+      }
+      voltear/=10;
+    }
+    System.out.println("El número resultante es "+ numPart1 +""+ numResultante +".");
+  }
+}
 

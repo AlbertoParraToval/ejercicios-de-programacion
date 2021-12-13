@@ -10,7 +10,7 @@ public class Ex28_05 {
     System.out.print("Introduce un numero por teclado: ");
     int numero = Integer.parseInt(System.console().readLine()) ;
     int facto = 1;
-    int multiplicarFactorial=1;
+    int multiplicarFactorial= 1;
     // Mientras facto menor al numero introducido +1 facto y definimos multiplicarFactorial
     while (facto < numero){
       facto++;
