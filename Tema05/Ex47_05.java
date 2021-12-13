@@ -1,38 +1,38 @@
 /**
-    Escribe un programa que, dado un número entero positivo, diga cuáles son y
- *  cuánto suman los dígitos pares. Los dígitos pares se deben mostrar en orden
- * ,de izquierda a derecha. Usa long en lugar de int donde sea necesario para 
- *  admitir números largos. * 
+    Realiza un programa que pinte por pantalla un rectángulo hueco hecho con
+ * asteriscos. Se debe pedir al usuario la anchura y la altura. Hay que comprobar
+ * que tanto la anchura como la altura sean mayores o iguales que 2, en caso
+ * contrario se debe mostrar un mensaje de error. 
  * 
  * @author Alberto Parra Toval
  */
 public class Ex47_05 {
   public static void main(String[] args) {
-    System.out.println("Escribe un programa que, dado un numero entero positivo, diga cuales son y cuánto suman los digitos pares.");
-    System.out.print("Introduce un numero por teclado: ");
-    int numero = Integer.parseInt(System.console().readLine()) ;
-    int esPar = 0 ;
-    int voltear = 0;
-    int sumaPares = 0;
-    int numCifra = 0;
-    System.out.print("Digitos pares: ");
-    /** Le doy la vuelta al numero para que coja las cifras de izq a derecha.**/
-    numero = (numero * 10) + 1;
-    while (numero > 0){
-      voltear = (voltear * 10) + (numero % 10);
-      numero /= 10;
-    }
-    /**saco la cifra del numero**/
-    while (voltear > 0){
-      numCifra = voltear % 10; 
-      esPar = numCifra % 2;
-      if ( esPar == 0){
-        sumaPares = numCifra + sumaPares ;  
-        System.out.print(numCifra + " ");
+    System.out.print("Introduce la altura del rectangulo por teclado(min. 2): ");
+    int altura = Integer.parseInt(System.console().readLine()) ;
+    System.out.print("Introduce la anchura del rectangulo por teclado(min. 2): ");
+    int anchura = Integer.parseInt(System.console().readLine()) ;
+    if ((altura < 2) || (anchura < 2)){
+      System.out.println("Lo siento, los datos introducidos no son correctos, el valor mínimo para la anchura y la altura es 2.");
+    }else{
+      /**Cabeza del rectangulo **/
+      for (int i = 0; i < anchura -1; i++){
+        System.out.print("*");
       }
-      voltear /= 10; //voy dividiendo el numero para que vaya reduciendo el numero.
+      /**Cuerpo del rectangulo **/
+      for (int i = 2; i < altura; i++ ){
+        System.out.println("");
+        System.out.print("*");
+        for (int aux = 2; aux <= (anchura - 2);aux++){
+          System.out.print(" ");
+        } 
+        System.out.print("*");
+      }
+      System.out.println("");
+      /**Base del rectangulo **/
+      for (int i = 1; i < anchura; i++){
+        System.out.print("*");
+      }
     }
-    System.out.print(" \n");
-    System.out.print("Suma de los digitos pares: "+ sumaPares + " ");
   }
 }
