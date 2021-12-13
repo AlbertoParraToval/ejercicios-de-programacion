@@ -1,69 +1,57 @@
+/*Una empresa de cartelería nos ha encargado un programa para realizar uno de
+ * sus diseños. Debido a los acontecimientos que han tenido lugar en Cataluña
+ * durante el 2018, han recibido muchos pedidos del cartel que muestra el número
+ * 155. Realiza un programa que pinte el número 155 mediante asteriscos. Al
+ * usuario se le pedirán dos datos, la altura del cartel y el número de espacios
+ * que habrá entre los números. La altura mínima es 5. La anchura de los números
+ * siempre es la misma. La parte superior de los cincos también es siempre igual.
+ * La parte inferior del 5 sí que varía en función de la altura.
+ *      @author Alberto Parra Toval
+ * */
+
 public class Ex50_05 {
     public static void main(String[] args) {
-        System.out.println("[Programa que dibuja una X]");
-        System.out.println("---------------------------");
-        System.out.print("Introduce la altura de tu X: ");
-        int alturaIntroducida =  Integer.parseInt(System.console().readLine());
-
-        int altura = 1;
-        int i = 0;
-        int espaciosInternos = alturaIntroducida - 1;
-        int espaciosPorDelante = 0;
+        System.out.print("Introduzca la altura (5 como mínimo): ");
+    int altura = Integer.parseInt(System.console().readLine()) ;
+    System.out.print("Introduzca el número de espacios entre los números (1 como mínimo): ");
+    int espaciosNum = Integer.parseInt(System.console().readLine()) ;
+    int base = 4;
+    int linea = 1; 
     
-        if ((alturaIntroducida < 3) || (alturaIntroducida % 2 == 0)) {
-            System.out.print("Error 404, No es posible pintar la X con la altura elegida.");
-        } else {
-          // parte de arriba ////
-            while (altura < alturaIntroducida / 2 + 1) {
-            
-            // inserta espacios delante
-            for (i = 1; i <= espaciosPorDelante; i++) {
-                System.out.print(" ");
-            }
-            
-            // pinta la línea
-            System.out.print("*");
-            for (i = 1; i < espaciosInternos; i++) {
-                System.out.print(" ");
-            }
-            
-            System.out.print("*");
-            
-            System.out.println();
-            altura++;
-            espaciosPorDelante++;
-            espaciosInternos -= 2;      
-          } // while parte de arriba ///////////////////////
-        
-          // parte de abajo /////////////////////////////////////
-            espaciosInternos = 0;
-            espaciosPorDelante = alturaIntroducida / 2;
-            altura = 1;
-            
-            while (altura <= alturaIntroducida / 2 + 1) {
-            
-            // inserta espacios delante
-            for (i = 1; i <= espaciosPorDelante; i++) {
+    while (linea <= altura){
+        /**NUMERO 1**/
+        System.out.print("*");
+        /**Espacios entre numero**/
+        for (int espacio = 0; espacio < espaciosNum; espacio++){
+        System.out.print(" ");
+        }
+        /**NUMERO 5**/
+        for (int anchura5 = 1; anchura5 <= base; anchura5++){
+            if ((linea == 2 )&&(anchura5 > 1)){
             System.out.print(" ");
+            }else if (((linea > 3) && (linea < altura)) && (anchura5 < 4)){
+            System.out.print(" ");
+            }else {
+            System.out.print("*");
             }
-            
-            // pinta la línea
-                System.out.print("*");
-            for (i = 1; i < espaciosInternos; i++) {
-                System.out.print(" ");
-            }
-            
-            if(altura>1) {
-                System.out.print("*");
-            }
-            
-            System.out.println();
-            altura++;
-            espaciosPorDelante--;
-            espaciosInternos+=2;
-          } // while parte de abajo ///////////////////////
+        }
+        /**Espacios entre numero**/
+        for (int espacio = 0; espacio < espaciosNum; espacio++){
+            System.out.print(" ");
+        }
+        /**NUMERO 5**/
+        for (int anchura5 = 1; anchura5 <= base; anchura5++){
+            if ((linea == 2 )&&(anchura5 > 1)){
+            System.out.print(" ");
+            }else if (((linea > 3) && (linea < altura)) && (anchura5 < 4)){
+            System.out.print(" ");
+            }else {
+            System.out.print("*");
+        }
+        }
+        linea++;
+        System.out.println(" ");
         }
     }
 }
-    
 
