@@ -1,8 +1,11 @@
-/** Escribe un programa que rellene un array de 15 elementos con números enteros
- * comprendidos entre 0 y 500 (ambos incluidos). A continuación, se mostrará el
- * array cincuerizado, según el siguiente criterio: si el número que hay en una
- * posición del array es múltiplo de 5, se deja igual, y si no, se cambia por el
- * siguiente múltiplo de 5 que exista a partir de él.
+/** Realiza un programa que sea capaz de recolocar los números de un array de fuera
+ * hacia adentro.En primer lugar,el programa pedirá al usuario el tamaño del array.
+ * A continuación generará un array con ese tamaño con números enteros aleatorios 
+ * entre 0 y 200 ambos incluidos. Seguidamente el programa irá colocando desde fuera
+ * hacia adentro los números de tal forma que el primero se coloca en la primera pos
+ * -ición, el segundo en la última, el tercero en la segunda, el cuarto en la penúlt
+ * -ima, el quinto en la tercera, en sexto en la antepenúltima, etc. Se debe mostrar
+ * por pantalla tanto el array original como el array resultado.
  *
  * @author Alberto Parra Toval
  */
