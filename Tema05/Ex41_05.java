@@ -1,38 +1,43 @@
 /**
-    Escribe un programa que, dado un número entero positivo, diga cuáles son y
- *  cuánto suman los dígitos pares. Los dígitos pares se deben mostrar en orden
- * ,de izquierda a derecha. Usa long en lugar de int donde sea necesario para 
- *  admitir números largos. * 
+    Escribe un programa que diga cuántos dígitos pares y cuántos dígitos impares
+ * hay dentro de un número. Se recomienda usar long en lugar de int ya que el
+ * primero admite números más largos.
  * 
  * @author Alberto Parra Toval
  */
-public class Ex32_05 {
+public class Ex41_05 {
   public static void main(String[] args) {
-    System.out.println("Escribe un programa que, dado un numero entero positivo, diga cuales son y cuánto suman los digitos pares.");
-    System.out.print("Introduce un numero por teclado: ");
-    int numero = Integer.parseInt(System.console().readLine()) ;
-    int esPar = 0 ;
-    int voltear = 0;
-    int sumaPares = 0;
-    int numCifra = 0;
-    System.out.print("Digitos pares: ");
-    /** Le doy la vuelta al numero para que coja las cifras de izq a derecha.**/
-    numero = (numero * 10) + 1;
-    while (numero > 0){
-      voltear = (voltear * 10) + (numero % 10);
-      numero /= 10;
-    }
-    /**saco la cifra del numero**/
-    while (voltear > 0){
-      numCifra = voltear % 10; 
-      esPar = numCifra % 2;
-      if ( esPar == 0){
-        sumaPares = numCifra + sumaPares ;  
-        System.out.print(numCifra + " ");
+    System.out.println("El programa pide 2 y luego los mezcle en dos números diferentes los dígitos pares y los impares.");
+    System.out.print("Por favor, introduzca un número entero positivo: ");
+    long numeroIntroducido = Integer.parseInt(System.console().readLine()) ;
+    long numero = numeroIntroducido;
+    long voltear = 0;
+    int longitud = 0;
+    if ( numero == 0){
+      longitud=1;
       }
-      voltear /= 10; //voy dividiendo el numero para que vaya reduciendo el numero.
+    
+    ///Volteo el numero 
+    while (numero > 0){
+      
+      voltear = (voltear * 10) + (numero %10);
+      numero /= 10;
+      longitud++;
     }
-    System.out.print(" \n");
-    System.out.print("Suma de los digitos pares: "+ sumaPares + " ");
+    long numeroPares = 0;
+    long numeroImpares = 0;
+    int digito = 0;
+    //Recorro el numero para obtener el que quiero
+    for (int a = 0; a < longitud; a++){
+      digito = (int)(voltear %10);
+      if ((digito % 2)==0){
+        numeroPares++;
+      }else{
+        numeroImpares++;
+      }
+      voltear/=10;
+    }
+    System.out.println("El "+ numeroIntroducido +" contiene "+ numeroPares +" dígitos pares y "+numeroImpares+" dígitos impares.");
+  
   }
 }
