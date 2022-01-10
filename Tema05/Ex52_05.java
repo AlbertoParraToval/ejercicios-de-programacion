@@ -10,7 +10,7 @@ public class Ex52_05 {
     System.out.print("Introduzca la altura de la figura: ");
     int altura = Integer.parseInt(System.console().readLine()) ;
     while (altura > 0){ //Se repite mientra la altura sea mayor a 0
-      for (int i = altura; i > 0; i--){
+      for (int i = 0; i < altura; i++){
         System.out.print("*");
       }
       System.out.println("");

@@ -13,7 +13,7 @@ public class Ex56_05 {
       System.out.print("*");
     }
     System.out.println("");
-    while (altura -1 > 0){
+    while (altura - 1 > 0){
       for (int i = 0; i < numEspacios; i++){ // Mientras i sea mayor a numero de espacios
         System.out.print(" ");
       }
