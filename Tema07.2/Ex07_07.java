@@ -7,32 +7,30 @@
  */
 public class Ex07_07 {
   public static void main(String[] args) throws InterruptedException {
-    // Definimos las variables 
+    // se definen constantes para representar el
     // contenido de las celdas
     final int VACIO = 0;
     final int MINA = 1;
     final int TESORO = 2;
     final int INTENTO = 3;
-    int x;
-    int y;
-    int[][] cuadrante = new int[5][4];
-
-    // inicializa el array
-    for (x = 0; x < 4; x++) {
-      for (y = 0; y < 3; y++) {
+    int x,y;
+    int[][] cuadrante = new int[7][6];
+    //Inicializo el Array
+    for (x = 0; x < 6; x++) {
+      for (y = 0; y < 5; y++) {
         cuadrante[x][y] = VACIO;
       }
     }
     // coloca la mina
-    int minaX = (int) (Math.random() * 5);
-    int minaY = (int) (Math.random() * 4);
+    int minaX = (int) (Math.random() * 6);
+    int minaY = (int) (Math.random() * 5);
     cuadrante[minaX][minaY] = MINA;
     // coloca el tesoro
     int tesoroX;
     int tesoroY;
     do {
-      tesoroX = (int) (Math.random() * 5);
-      tesoroY = (int) (Math.random() * 4);
+      tesoroX = (int) (Math.random() * 6);
+      tesoroY = (int) (Math.random() * 5);
     } while ((minaX == tesoroX) && (minaY == tesoroY));
     cuadrante[tesoroX][tesoroY] = TESORO;
     // juego
@@ -42,9 +40,9 @@ public class Ex07_07 {
     String c = "";
     do {
       // pinta el cuadrante
-      for (y = 3; y >= 0; y--) {
+      for (y = 5; y >= 0; y--) {
         System.out.print(y + "|");
-        for (x = 0; x < 5; x++) {
+        for (x = 0; x < 6; x++) {
           if (cuadrante[x][y] == INTENTO) {
             System.out.print("X ");
           } else {
@@ -53,7 +51,7 @@ public class Ex07_07 {
         }
         System.out.println();
       }
-      System.out.println(" ----------\n 0 1 2 3 4\n");
+      System.out.println(" ----------\n 0 1 2 3 4 5\n");
       // pide las coordenadas
       System.out.print("Coordenada x: ");
       x = Integer.parseInt(System.console().readLine());
@@ -72,7 +70,6 @@ public class Ex07_07 {
           System.out.println("¡Enhorabuena! ¡Has encontrado el tesoro!");
           salir = true;
           break;
-
         default:
       }
     } while (!salir);
@@ -88,7 +85,7 @@ public class Ex07_07 {
             c = "* ";
             break;
           case TESORO:
-            c = "# ";
+            c = "€ ";
             break;
           case INTENTO:
             c = "X ";
@@ -99,6 +96,6 @@ public class Ex07_07 {
       }
       System.out.println();
     }
-    System.out.println(" ----------\n 0 1 2 3 4\n");
+    System.out.println(" ------------\n 0 1 2 3 4 5 6\n");
   }
 }

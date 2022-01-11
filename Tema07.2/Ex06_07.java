@@ -6,61 +6,42 @@
  */
 public class Ex06_07 {
   public static void main(String[] args) throws InterruptedException {
-    int[][] num = new int[6][10]; // array de 6 filas por 10 columnas (6x10)
-    int fila;
-    int columna;
+    int[][] n = new int[6][10];
+    // declaramos las variables
+    int filas, columnas, max, min;
+    max = 0;
+    min = 1000;
 
-    int valorMax = Integer.MAX_VALUE;
-    int filaMaximo = 0;
-    int columnaMaximo = 0;
+    System.out.print(
+        "             Columna 1 Columna 2   Columna 3  Columna 4  Columna 5  Columna 6  Columna 7  Columna 8  Columna 9  Columna 10");
 
-    int valorMin = Integer.MIN_VALUE;
-    int filaMinimo = 0;
-    int columnaMinimo = 0;
-    System.out.print("\n      ");
-    for (columna = 0; columna < 10; columna++) {
-      System.out.print("   " + columna + "  ");
+    System.out.println();
+    for (columnas = 0; columnas < 10; columnas++) {
+      System.out.print("------------");
     }
     System.out.println();
-
-    System.out.print("    ");
-    for (columna = 0; columna < 9; columna++) {
-      System.out.print("-------");
-    }
-    System.out.println("");
-    
-    for (fila = 0; fila < 6; fila++) {
-      System.out.print("  " + fila + " |");
-      for (columna = 0; columna < 10; columna++) {
-        
-        num[fila][columna] = (int) (Math.random() * 1000);
-        System.out.printf("%5d ", num[fila][columna]);
-        Thread.sleep(100);
-
-        // Calcula el mínimo y guarda sus coordenadas
-        if (num[fila][columna] < valorMin) {
-          valorMin = num[fila][columna];
-          filaMinimo = fila;
-          columnaMinimo = columna;
+    // Numeros aleatorios que iran dentro de nuestro array
+    for (filas = 0; filas < 6; filas++) {
+      System.out.print("Fila: " + filas + " |");
+      for (columnas = 0; columnas < 10; columnas++) {
+        n[filas][columnas] = (int) (Math.random() * 1000);
+        // Si el valor que sale supera al del valor max, se convierte en el maximo
+        if (n[filas][columnas] >= max) {
+          max = n[filas][columnas];
         }
-
-        // Calcula el máximo y guarda sus coordenadas
-        if (num[fila][columna] > valorMax) {
-          valorMax = num[fila][columna];
-          filaMaximo = fila;
-          columnaMaximo = columna;
+        // Si el valor que sale es menor que el numero se convierte en el minimo
+        if (n[filas][columnas] <= min) {
+          min = n[filas][columnas];
         }
+        // Mostramos el Array
+        System.out.printf("%10d ", n[filas][columnas]);
       }
-      System.out.println("|");
+      System.out.println();
     }
-    System.out.print("    ");
-    for (columna = 0; columna < 9; columna++) {
-      System.out.print("-------");
-    }
-
-    System.out
-        .println("\n\nEl maximo es " + valorMax + " y esta en la fila " + filaMaximo + ", columna " + columnaMaximo);
-    System.out.println("El minimo es " + valorMin + " y esta en la fila " + filaMinimo + ", columna " + columnaMinimo);
-
+    // Mostramos los valres minimos y maximos por pantalla
+    System.out.println();
+    System.out.print("El valor maximo es " + max);
+    System.out.println();
+    System.out.print("El valor minimo es " + min);
   }
 }
