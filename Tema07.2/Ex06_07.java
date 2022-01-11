@@ -13,13 +13,15 @@ public class Ex06_07 {
     min = 1000;
 
     System.out.print(
-        "             Columna 1 Columna 2   Columna 3  Columna 4  Columna 5  Columna 6  Columna 7  Columna 8  Columna 9  Columna 10");
+        "             Columna 1  Columna 2  Columna 3  Columna 4  Columna 5  Columna 6  Columna 7  Columna 8  Columna 9  Columna 10");
 
     System.out.println();
-    for (columnas = 0; columnas < 10; columnas++) {
-      System.out.print("------------");
+    for (columnas = 0; columnas < 8; columnas++) {
+      System.out.print("----------------");
     }
     System.out.println();
+
+    
     // Numeros aleatorios que iran dentro de nuestro array
     for (filas = 0; filas < 6; filas++) {
       System.out.print("Fila: " + filas + " |");
@@ -36,7 +38,10 @@ public class Ex06_07 {
         // Mostramos el Array
         System.out.printf("%10d ", n[filas][columnas]);
       }
-      System.out.println();
+      System.out.println("  |");
+    }
+    for (columnas = 0; columnas < 10; columnas++) {
+      System.out.print("------------");
     }
     // Mostramos los valres minimos y maximos por pantalla
     System.out.println();
