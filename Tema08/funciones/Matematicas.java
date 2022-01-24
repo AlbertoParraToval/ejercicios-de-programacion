@@ -65,21 +65,35 @@ public class Matematicas {
 
 
 
+  /**
+   *  Calcula si un numero introducido es CAPICUA O NO
+   * @param numero 
+   * @return Si es o no es capicua
+   */
+  public static boolean esCapicua(int numero) {
+    //usando la función voltea, solo necesitamos saber si el resultado final de la función es igual al número introducido, si es así, la función será verdadera; y si no, falsa
+    if (funciones.Matematicas.voltea(numero) == numero) { 
+      return true;
+    } else {
+      return false;
+    }
+  } //public static boolean esCapicua(long numero)
 
 
-  public static boolean esCapicua(int numero){
-    long voltear = 0;
-        // Le doy la vuelta al nuemro 
-        while (numero > 0){
-            voltear = (voltear * 10) + (numero % 10);
-            numero /= 10;
-        }
 
-        if (voltear == numero ) { // Si es igual es capicua
-          return true;
-      } else{
-          return false;
-      }
+
+
+  
+  public static int voltea(int numero) {
+    int darLaVuelta = 0; //en esta variable se irá guardando el número al que poco a poco se le irá dando la vuelta
+    
+    while (numero > 0) {
+      //el resto del número introducido entre 10 (su último dígito) se irá sumando a lo que haya en darLaVuelta multiplicado por 10 para actualizar darLaVuelta
+      darLaVuelta = ((darLaVuelta * 10) + ((int)numero % 10)); 
       
-  }
+      numero /= 10; //cada vez que el bucle de una vuelta el número introducido se dividirá entre 10, así hasta que este número sea igual a 0.
+    } //while (numero > 0)
+
+    return darLaVuelta; //si el número introducido es igual a cero significa que el número ya ha sido volteado, por lo que se devolverá ael resultado
+  } //public static int voltea(int numero)
 }
