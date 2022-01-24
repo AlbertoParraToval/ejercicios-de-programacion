@@ -121,7 +121,24 @@ public class Matematicas {
       return exponenteIntroducido;
   }
 
-
+  /**
+   * 
+   * @param numero
+   * @return
+   */
+  public static int digitos(int numero){
+    int numeroDeDigitos = 1;
+    int i;
+    i = numero;
+    
+    //La condicion para que empiece a contar los numeros es que sea mayor a 10
+    while (i > 10) {
+      i /= 10; //lo divide y si sigue siendo mayor a 10 lo cuenta
+      numeroDeDigitos++;
+    System.out.println(numero + " tiene " + numeroDeDigitos + " digitos");
+    }
+    return numeroDeDigitos;
+  }
 
 
 
