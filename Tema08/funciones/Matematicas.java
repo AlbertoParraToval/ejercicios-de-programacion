@@ -165,5 +165,36 @@ public class Matematicas {
 
 
 
+  public static int NDigitos(int numero, int digito){
+    //defino mis variables
+    int cifra = 1; 
+    int posicion = 0;
+    int voltear = 0;
+    
+    numero = (numero * 10) +1;
+    //Si numeor es mayor que 0
+    while (numero > 0){
+      voltear = (voltear * 10) + (numero %10);
+      numero /= 10;
+    }
+    // mientras voltear sea mayor que 0
+    while (voltear > 0){
+      /*si la cifra es igual al digito entonces mostrara el siguiente mensaje por pantalla*/
+      if (posicion > 0){
+        if (cifra == digito){
+          System.out.println("El digito en la posicion "+ posicion +" es "+cifra);
+        }
+      }
+      
+      cifra = voltear % 10; /*saco la cifra con el modulo*/
+      
+      voltear = voltear / 10;  /*divido el numero entre 10 para ir reduciendo el numero*/
+      
+      posicion++;/*por cada vuelta aumento la posicion hasta llegar al digito deseado*/
+    }
+    return posicion;
+  }
+
+
 
 }
