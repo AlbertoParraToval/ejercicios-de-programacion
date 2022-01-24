@@ -24,6 +24,10 @@ public class Matematicas {
     return esPrimo;
   }
 
+
+
+
+
   /**
    * Media del trimestre con ponderaciones
    * 
@@ -35,6 +39,10 @@ public class Matematicas {
     double resultado = (examen1 * 0.4) + (examen2 * 0.6);
     return resultado;
   }
+
+
+
+
 
   /**
    * Genera un valor entero aleatorio entre
@@ -51,8 +59,10 @@ public class Matematicas {
 
 
 
+
   /**
    * Calcula la media aritmetica de tres números.
+   * 
    * @param nota1
    * @param nota2
    * @param nota3
@@ -67,6 +77,7 @@ public class Matematicas {
 
   /**
    *  Calcula si un numero introducido es CAPICUA O NO
+   * 
    * @param numero 
    * @return Si es o no es capicua
    */
@@ -83,8 +94,9 @@ public class Matematicas {
 
 
 
-    /**
+  /**
    *  Va volteando un numero 
+   * 
    * @param numero 
    * @return El numero con las veces que ha volteado este
    */
@@ -103,8 +115,11 @@ public class Matematicas {
 
 
 
+
+
   /***
    * Base y el Exponente de un numero
+   * 
    * @param base
    * @param exponente
    * @return El exponente que le demos 
@@ -121,10 +136,16 @@ public class Matematicas {
       return exponenteIntroducido;
   }
 
+
+
+
+
+
   /**
+   * Contar el  numero de digitos que tiene un numero
    * 
    * @param numero
-   * @return
+   * @return El numero de digitos resultante.
    */
   public static int digitos(int numero){
     int numeroDeDigitos = 1;
