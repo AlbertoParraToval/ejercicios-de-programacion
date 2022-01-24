@@ -83,7 +83,11 @@ public class Matematicas {
 
 
 
-  
+    /**
+   *  Va volteando un numero 
+   * @param numero 
+   * @return El numero con las veces que ha volteado este
+   */
   public static int voltea(int numero) {
     int darLaVuelta = 0; //en esta variable se irá guardando el número al que poco a poco se le irá dando la vuelta
     

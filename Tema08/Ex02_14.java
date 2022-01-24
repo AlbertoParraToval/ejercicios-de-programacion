@@ -1,11 +1,12 @@
 import funciones.Figuras;
 import funciones.Matematicas;
 /**
- * PAGINA DE PRUEBA EJERCICIO 2
+ * PAGINA DE PRUEBA EJERCICIO 1
  */
+
 public class Ex02_14 {
   public static void main(String[] args) {
-      System.out.println("Programa que te dice si un numero es primo o no");
+    System.out.println("Programa que te dice si un numero es primo o no");
       System.out.println("-----------------------------------------------");
       
       System.out.println("True = EsPrimo y False = No EsPrimo");      
@@ -15,5 +16,6 @@ public class Ex02_14 {
       System.out.println(funciones.Matematicas.esPrimo(numero)); //Llamada a la funcion del paquete matematicas
   }
 }
+
 
 
