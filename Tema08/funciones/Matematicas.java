@@ -100,4 +100,32 @@ public class Matematicas {
 
     return darLaVuelta; //si el número introducido es igual a cero significa que el número ya ha sido volteado, por lo que se devolverá ael resultado
   } //public static int voltea(int numero)
+
+
+
+  /***
+   * Base y el Exponente de un numero
+   * @param base
+   * @param exponente
+   * @return El exponente que le demos 
+  */
+  public static int potencia(int base,  int exponente){ 
+    // Definimos el buble hasta que nuestra variable auxiliar i supere a nuestro exponenete introducido
+    int exponenteIntroducido = exponente;
+    for (int i = 1; i <= exponenteIntroducido; i++) {
+      // Mostramos el resultado por pantalla
+          System.out.println("El resultado es: " + base + "^" + i);
+          System.out.println("--------------------");
+          
+      }
+      return exponenteIntroducido;
+  }
+
+
+
+
+
+
+
+
 }
