@@ -1,18 +1,21 @@
-import funciones.Figuras;
-import funciones.Matematicas;
+import funciones.funciones_EX14;
 /**
- * PAGINA DE PRUEBA EJERCICIO 7
+ * Programa que le quita a un número n dígitos por detrás (por la
+ * derecha)
+ * 
+ * @author Alberto Parra Toval
  */
 
 public class Ex08_14 {
   public static void main(String[] args) {
-    //Pedimos al usuario que nos deiga un numero y un digito
+    System.out.println("Programa que le quita a un numero a n digitos por detras");
+    System.out.println("--------------------------------------------------------");
     System.out.print("Introduce un numero por teclado: ");
     int numero = Integer.parseInt(System.console().readLine());
     System.out.print("Introduce un digito por teclado: ");
     int digito = Integer.parseInt(System.console().readLine());
     
-    System.out.println(funciones.Matematicas.NDigitos(numero, digito));
+    System.out.println(funciones.funciones_EX14.quitaPorDetras(numero, digito));
   }
 }
 

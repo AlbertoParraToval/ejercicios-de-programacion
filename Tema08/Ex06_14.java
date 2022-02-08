@@ -1,7 +1,9 @@
-import funciones.Figuras;
-import funciones.Matematicas;
+import funciones.funciones_EX14;
 /**
- * PAGINA DE PRUEBA EJERCICIO 2
+ * Realiza un programa que pida un número por teclado y que luego muestre ese
+ * número al revés.
+ * 
+ * @author Alberto Parra Toval
  */
 public class Ex06_14 {
   public static void main(String[] args) {
@@ -9,7 +11,7 @@ public class Ex06_14 {
       System.out.println("----------------------------------------------------");
       System.out.print("Introduce el numero que desees: ");
       int n = Integer.parseInt(System.console().readLine());
-      System.out.println(funciones.Matematicas.voltea(n));
+      System.out.println(funciones.funciones_EX14.voltea(n));
   }
 }
 

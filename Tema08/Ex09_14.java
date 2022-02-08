@@ -1,7 +1,9 @@
-import funciones.Figuras;
-import funciones.Matematicas;
+import funciones.funciones_EX14;
 /**
- * PAGINA DE PRUEBA EJERCICIO 7
+ * Programa que le quita a un número n dígitos por delante (por la
+ * izquierda)
+ * 
+ * @author Alberto Parra Toval
  */
 
 public class Ex09_14 {
@@ -13,7 +15,7 @@ public class Ex09_14 {
     System.out.print("Introduce un digito por teclado: ");
     int digito = Integer.parseInt(System.console().readLine());
     
-    System.out.println(funciones.Matematicas.NDigitos(numero, digito));
+    System.out.println(funciones.funciones_EX14.quitaPorDelante(numero, digito));
   }
 }
 

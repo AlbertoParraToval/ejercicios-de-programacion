@@ -1,5 +1,4 @@
-import funciones.Figuras;
-import funciones.Matematicas;
+import funciones.funciones_EX14;
 /**
  * PAGINA DE PRUEBA EJERCICIO 7
  */
@@ -9,11 +8,11 @@ public class Ex10_14 {
     System.out.println("El programa nos dara la posición  de un ese dígito en el número introducido.");
     //Pedimos al usuario que nos deiga un numero y un digito
     System.out.print("Introduce un numero por teclado: ");
-    int numero = Integer.parseInt(System.console().readLine());
+    long numero = Long.parseLong(System.console().readLine());
     System.out.print("Introduce un digito por teclado: ");
     int digito = Integer.parseInt(System.console().readLine());
     
-    System.out.println(funciones.Matematicas.NDigitos(numero, digito));
+    System.out.print("El nuevo número es " + funciones.funciones_EX14.quitaPorDelante(numero, digito));
   }
 }
 

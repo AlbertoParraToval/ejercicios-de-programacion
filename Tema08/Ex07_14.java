@@ -1,19 +1,21 @@
-import funciones.Figuras;
-import funciones.Matematicas;
+import funciones.funciones_EX14;
 /**
- * PAGINA DE PRUEBA EJERCICIO 7
+ *  Devuelve el dígito que está en la posición n de un número entero.
+ * Se empieza contando por el 0 y de izquierda a derecha.
+ * 
+ * @author Alberto Parra Toval
  */
 
 public class Ex07_14 {
   public static void main(String[] args) {
-    System.out.println("El programa nos dara la posición  de un ese dígito en el número introducido.");
+    System.out.println("El programa nos dara la posicion  de un ese digito en el número introducido.");
     //Pedimos al usuario que nos deiga un numero y un digito
     System.out.print("Introduce un numero por teclado: ");
-    int numero = Integer.parseInt(System.console().readLine());
+    long numero = Long.parseLong(System.console().readLine());
     System.out.print("Introduce un digito por teclado: ");
     int digito = Integer.parseInt(System.console().readLine());
     
-    System.out.println(funciones.Matematicas.NDigitos(numero, digito));
+    System.out.println("El digito en la posicion numero " + digito + " es el " + funciones.funciones_EX14.digitoN(numero, digito));
   }
 }
 
