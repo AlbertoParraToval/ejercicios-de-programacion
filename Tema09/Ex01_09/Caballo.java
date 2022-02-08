@@ -1,5 +1,5 @@
 package Ex01_09;
-public  class Caballo {
+public  class  Caballo {
   String nombre ="Platero";
   String perigrie = "Caballo Aleman";
   int edad = 6;
