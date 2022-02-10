@@ -1,3 +1,5 @@
+import Ex06_09.Tiempo;
+
 public class Main_06_10 {
   public static void main(String[] args) {
     /**
@@ -14,8 +16,14 @@ public class Main_06_10 {
      * resultado debería ser 1h 6m 0s. Realiza un programa de prueba para comprobar
      * que la clase funciona bien.
      */
+    System.out.println("EJERCICIO 6");
+    System.out.print("==============");
+    //Tiempo t1 = new Tiempo(1, 20, 30);
+    //Tiempo t2 = new Tiempo(0, 30, 40);
+    //Tiempo t3 = new Tiempo(0, 35, 20);
 
-    
+    //System.out.println(t1 + " + " + t2 + " = " + t1.suma(t2));
+    //System.out.println(t2 + " - " + t3 + " = " + t2.resta(t3));
 
 
   }

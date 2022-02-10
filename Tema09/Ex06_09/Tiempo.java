@@ -15,5 +15,26 @@ package Ex06_09;
  * que la clase funciona bien.
  */
 public class Tiempo {
+  String minutos;
+  String horas;
+  String segundos;
+
+  public void tiempo() {
+  }
+  
+  
+
+  //public Tiempo suma(Tiempo t2) {
+    
+    //int horasTotales = t1.horas + t2.horas;
+  //}
+
+  public Tiempo resta(Tiempo t3) {
+    return null;
+  }
+
+
+
   
 }
+

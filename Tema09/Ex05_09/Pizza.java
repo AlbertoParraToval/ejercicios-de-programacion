@@ -31,12 +31,12 @@ public class Pizza {
     return "pizza" + this.tipoPizza + " " + this.tamano + ", " + this.estado;
   }
 
-  //Almacenar las pizzas pedidas
+  //Devuelve las pizzas pedidas
   public static int getTotalPedidas() {
     return Pizza.totalPedidas;
   }
 
-  //Almacenar las pizzas servidas
+  //Devuelve las pizzas servidas
   public static int getTotalServidas() {
     return Pizza.totalServidas;
   }
