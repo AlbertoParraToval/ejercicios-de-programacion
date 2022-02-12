@@ -1,6 +1,6 @@
 import Ex06_09.Tiempo;
 
-public class Main_06_10 {
+public class Main_06_09 {
   public static void main(String[] args) {
     /**
      * Ejercicio 6 Crea la clase Tiempo con los métodos suma y resta. Los objetos de
