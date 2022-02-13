@@ -1,5 +1,11 @@
 import funciones.funciones_Ex28;
 import java.util.Scanner;
+/**
+ * 
+ * Programa que devuelve el numero minimo del array y el maximo del array
+ * 
+ * @author Alberto Parra Toval
+ */
 
 public class Ex20_28 {
   public static void main(String[] args) {
