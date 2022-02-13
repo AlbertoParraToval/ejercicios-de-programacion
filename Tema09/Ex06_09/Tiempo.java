@@ -15,26 +15,41 @@ package Ex06_09;
  * que la clase funciona bien.
  */
 public class Tiempo {
-  String minutos;
-  String horas;
-  String segundos;
-
-  public void tiempo() {
+  
+  private int segundos;
+  
+  public Tiempo(int horas, int minutos, int segundos) {
+    this.segundos = (horas * 3600) + (minutos * 60) + segundos;
   }
   
-  
-
-  //public Tiempo suma(Tiempo t2) {
+  public Tiempo(int s) {
+    this.segundos = s;
+  }
     
-    //int horasTotales = t1.horas + t2.horas;
-  //}
-
-  public Tiempo resta(Tiempo t3) {
-    return null;
+  public String toString() {
+    int segundos = this.segundos;
+    int horas = segundos / 3600;
+    segundos -= horas * 3600;
+    int minutos = segundos / 60;
+    segundos -= minutos * 60;
+    
+    if (this.segundos < 0) {
+      return "-(" + (-horas) + "h " + (-minutos) + "m " + (-segundos) + "s)";
+    } else {
+      return horas + "h " + minutos + "m " + segundos + "s";
+    }
   }
 
-
-
+  private int getSegundos() {
+    return this.segundos;
+  }
   
+  public Tiempo suma(Tiempo t) {
+    return new Tiempo(this.segundos + t.getSegundos());
+  }
+
+  public Tiempo resta(Tiempo t) {
+    return new Tiempo(this.segundos - t.getSegundos());
+  }
 }
 
