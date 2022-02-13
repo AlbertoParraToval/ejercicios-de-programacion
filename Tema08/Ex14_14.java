@@ -1,6 +1,8 @@
 import funciones.funciones_EX14;
 /**
- * PAGINA DE PRUEBA EJERCICIO 7
+ * Pega dos numeros que introduzcamos para formar 1 soltero
+ * 
+ * @author Alberto Parra Toval
  */
 
 public class Ex14_14 {
