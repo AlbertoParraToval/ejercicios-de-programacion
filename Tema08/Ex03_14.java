@@ -5,7 +5,6 @@ import funciones.funciones_EX14;
  * 
  * @author Alberto Parra Toval
  */
-
 public class Ex03_14 {
   public static void main(String[] args) {
     System.out.println("Programa que devuelve un menor primo que es mayor al numero introducido");
