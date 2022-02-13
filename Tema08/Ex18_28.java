@@ -24,10 +24,7 @@ public class Ex18_28 {
     //definimos primero al número binario como String para añadir al mismo cero y unos sin inconvenientes
     String numeroBi = "";
 
-    //en cada iteración del bucle numeroDe (el número decimal introducido), irá reduciendose a la mitad sucesivamente.
-    //el bucle continuará hasta que numeroDe llegue a 0. El resto de la división de numeroDe entre 2 será el valor 
-    //añadido a la variable numeroBi. Se le añade por delante ya que el primer dígito del número binario corresponde 
-    //a la última división que se realice en el bucle, el segundo dígito con la penúltima división...
+    
     while (numeroDe > 0) {
       String digito = String.valueOf(numeroDe % 2);
 
