@@ -1,7 +1,7 @@
 import funciones.funciones_EX14;
 /**
- * Realiza un programa que pida un número por teclado y que luego muestre ese
- * número al revés.
+ * Realiza un programa que pida un numero por teclado y que luego muestre ese
+ * numero al reves.
  * 
  * @author Alberto Parra Toval
  */
