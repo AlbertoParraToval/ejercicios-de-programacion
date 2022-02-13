@@ -6,11 +6,11 @@ import funciones.funciones_EX14;
  */
 public class Ex015_28 {
   public static void main(String[] args) {
-    System.out.println("PROGRAMA QUE MUESTRA LOS NÚMEROS PRIMOS QUE HAY ENTRE EL 1 Y EL 1000");
+    System.out.println("PROGRAMA QUE MUESTRA LOS NUMEROS PRIMOS QUE HAY ENTRE EL 1 Y EL 1000");
     System.out.println("---------------------------------------------------------------------");
     System.out.println(" ");
 
-    System.out.println("Los números primos que hay entre el 1 y el 1000 son:\n");
+    System.out.println("Los numeros primos que hay entre el 1 y el 1000 son:\n");
     //Los numeros que me piden pues que se repita hasta 1000
     for(int i = 1;i<=1000;i++) {
       if (funciones.funciones_EX14.esPrimo(i)) {
