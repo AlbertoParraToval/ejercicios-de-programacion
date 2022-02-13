@@ -4,7 +4,7 @@ import funciones.funciones_EX14;
  * 
  * @author Alberto Parra Toval
  */
-public class Ex016_28 {
+public class Ex16_28 {
   public static void main(String[] args) {
     System.out.println("PROGRAMA QUE MUESTRA LOS NUMEROS CAPICUAS QUE HAY ENTRE EL 1 Y EL 99999");
     System.out.println("-----------------------------------------------------------------------");

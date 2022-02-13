@@ -16,9 +16,9 @@ public class funciones_Ex28 {
    * 
    * @author Alberto Parra Toval
    */
-  public static void muestraArray(int[] array, int tama駉) {
+  public static void muestraArray(int[] array, int tamano) {
     //la funci贸n mostrar谩 en cada iteraci贸n la posici贸n correspondiente a i (铆ndice)
-    for (int i = 0; i < tama駉; i++) {
+    for (int i = 0; i < tamano; i++) {
       System.out.print(array[i] + " ");
     }
   } 
@@ -34,12 +34,12 @@ public class funciones_Ex28 {
    * 
    * @author Alberto Parra Toval
    */
-  public static void muestraArrayEnTabla(int[] array, int tama駉) {
+  public static void muestraArrayEnTabla(int[] array, int tamano) {
     //la funcion pinta el borde superior de la tabla
-    for (int i = 0; i < tama駉; i++) {
+    for (int i = 0; i < tamano; i++) {
       if (i == 0) {
         System.out.print("------");
-      } else if (i == tama駉 - 1) {
+      } else if (i == tamano - 1) {
         System.out.print("------");
       } else {
         System.out.print("------");
@@ -49,7 +49,7 @@ public class funciones_Ex28 {
     System.out.println(" ");
 
     //se muestra el indice que estara sobre el numero de la posicion del array correspondiente
-    for (int j = 0; j < tama駉; j++) {
+    for (int j = 0; j < tamano; j++) {
       System.out.printf("%-1s %2d  " ,"|" ,j);
     }
 
@@ -58,10 +58,10 @@ public class funciones_Ex28 {
     System.out.println(" ");
 
     //se pinta el borde medio de la tabla
-    for (int k = 0; k < tama駉; k++) {
+    for (int k = 0; k < tamano; k++) {
       if (k == 0) {
         System.out.print("|-----|");
-      } else if (k == tama駉 - 1) {
+      } else if (k == tamano - 1) {
         System.out.print("-----|");
       } else {
         System.out.print("-----|");
@@ -71,7 +71,7 @@ public class funciones_Ex28 {
     System.out.println(" ");
 
     //s muestran los valores del array en cada posici贸n
-    for (int l = 0; l < tama駉; l++) {
+    for (int l = 0; l < tamano; l++) {
       System.out.printf("%-1s %3d " ,"|" ,array[l]);
     }
 
@@ -80,10 +80,10 @@ public class funciones_Ex28 {
     System.out.println(" ");
 
     //se pinta el borde inferior de la tabla
-    for (int m = 0; m < tama駉; m++) {
+    for (int m = 0; m < tamano; m++) {
       if (m == 0) {
         System.out.print("|-----|");
-      } else if (m == tama駉 - 1) {
+      } else if (m == tamano - 1) {
         System.out.print("-------");
       } else {
         System.out.print("-------");
@@ -103,14 +103,14 @@ public class funciones_Ex28 {
    * 
    * @author Alberto Parra Toval
    */
-  public static int[] generaArrayInt(int tama駉, int maximo, int minimo) {
+  public static int[] generaArrayInt(int tamano, int maximo, int minimo) {
     //se define el array que se va a generar
-    int[] array = new int[tama駉];
+    int[] array = new int[tamano];
 
     //en cada posici贸n se asiga un valor aleatorio gracias al aumento en cada iteraci贸n de la variable i.
     //el intervalo de los valores aleatorios se definir谩 multiplicando la funci贸n Math.random() por
     //el mayor n煤mero del intervalo menos el m铆nimo, para que al sumarle el m铆nimo el valor m谩ximo no cambie
-    for (int i = 0; i < tama駉; i++) {
+    for (int i = 0; i < tamano; i++) {
       array[i] = ((int)(Math.random() * (maximo - minimo)) + minimo);
     }
 

@@ -4,7 +4,7 @@ import funciones.funciones_EX14;
  * 
  * @author Alberto Parra Toval
  */
-public class Ex015_28 {
+public class Ex15_28 {
   public static void main(String[] args) {
     System.out.println("PROGRAMA QUE MUESTRA LOS NUMEROS PRIMOS QUE HAY ENTRE EL 1 Y EL 1000");
     System.out.println("---------------------------------------------------------------------");
