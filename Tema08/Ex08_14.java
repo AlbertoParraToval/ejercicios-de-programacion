@@ -1,6 +1,6 @@
 import funciones.funciones_EX14;
 /**
- * Programa que le quita a un número n dígitos por detrás (por la
+ * Programa que le quita a un numero n di�gitos por detras (por la
  * derecha)
  * 
  * @author Alberto Parra Toval
