@@ -1,25 +1,61 @@
 import Ex07_09.Zona;
+
 public class Main_07_09 {
   public static void main(String[] args) {
     System.out.println("ExpoCoches Campanillas");
     System.out.println("=======================");
 
-    Zona zona1 = new Zona(1000); //Zona principal
-    Zona zona2 = new Zona(200); //Zona de compra-venta
-    Zona zona3 = new Zona(25); //Zona vip
+    Zona principal = new Zona(1000);
+    Zona compraVenta = new Zona(200);
+    Zona vip = new Zona(25);
 
-    System.out.println("Que desea hacer: ");
-    System.out.print("a) Mostrar numero de entradas libres");
-    System.out.println(" ");
-    System.out.print("b) Vender entradas ");
-    System.out.println(" ");
-    System.out.println("c) Salir ");
+    int opcion = 0;
+    int opcion2 = 0;
+    int n = 0;
+    // Que lo haga una y otra vez para que al mostrar el numero de entradas en la opcion 1 poder volver a elegir la opcion
+    do {
+      System.out.println("1. Mostrar número de entradas libres");
+      System.out.println("2. Vender entradas");
+      System.out.println("3. Salir");
+      System.out.print("Elige una opción: ");
+      opcion = Integer.parseInt(System.console().readLine());
+      System.out.println(" ");
 
-    String opcion = System.console().readLine();
+      if (opcion == 1) {
+        System.out.println("\n\nEn la zona principal hay " + principal.getEntradasPorVender());
+        System.out.println("En la zona de compra venta hay " + compraVenta.getEntradasPorVender());
+        System.out.println("En la zona vip hay " + vip.getEntradasPorVender());
+        System.out.println();
+      }
 
-    if (opcion.equals("a")){
-      zona1.getEntradasPorVender();
-      System.out.println(zona1);
-    }
+      if (opcion == 2) {
+        System.out.println("\n\n1. Principal");
+        System.out.println("2. Compra-venta");
+        System.out.println("3. Vip");
+        System.out.print("Elige la zona para la que quieres comprar las entradas: ");
+
+        opcion2 = Integer.parseInt(System.console().readLine());
+
+        System.out.print("¿Cuántas entradas quieres?");
+        n = Integer.parseInt(System.console().readLine());
+
+        // Dentro de la opcion 2 para poder saber que tipo de entrada quiere comprar
+        switch (opcion2) {
+          case 1:
+            principal.vender(n);
+            System.out.println();
+            break;
+          case 2:
+            compraVenta.vender(n);
+            System.out.println();
+            break;
+          case 3:
+            vip.vender(n);
+            System.out.println();
+            break;
+          default:
+        }
+      }
+    } while (opcion < 3); // Menu principal
   }
 }
