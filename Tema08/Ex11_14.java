@@ -1,6 +1,6 @@
 import funciones.funciones_EX14;
 /**
- * PAGINA DE PRUEBA EJERCICIO 7
+ * Pega por detras el numero que le digamos
  */
 
 public class Ex11_14 {
@@ -9,7 +9,7 @@ public class Ex11_14 {
     //Pedimos al usuario que nos deiga un numero y un digito
     System.out.print("Introduce un numero por teclado: ");
     Long numero = Long.parseLong(System.console().readLine());
-    System.out.print("Introduce un digito por teclado: ");
+    System.out.print("Introduce el numero que quieras añadir: ");
     int digito = Integer.parseInt(System.console().readLine());
     
     System.out.println(funciones.funciones_EX14.pegaPorDetras(numero, digito));
