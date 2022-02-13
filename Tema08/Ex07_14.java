@@ -1,6 +1,6 @@
 import funciones.funciones_EX14;
 /**
- *  Devuelve el dígito que está en la posición n de un número entero.
+ *  Devuelve el digito que esta en la posicion n de un número entero.
  * Se empieza contando por el 0 y de izquierda a derecha.
  * 
  * @author Alberto Parra Toval
