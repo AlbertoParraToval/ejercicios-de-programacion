@@ -42,7 +42,7 @@ public class funciones_EX14 {
    * @param numero número que se va a comprobar si es o no capicúa
    * @return si el número es capicúa o no 
    * 
-   * @author Alberto Moreno Gonzalez
+   * @author Alberto Parra Toval
    */
   public static boolean esCapicua(long numero) {
     //usando la función voltea, solo necesitamos saber si el resultado final de la función es igual al número introducido, si es así, la función será verdadera; y si no, falsa
@@ -60,8 +60,8 @@ public class funciones_EX14 {
    * @param numero número que se va a comprobar si es o no primo
    * @return si el número es primo o no 
    * 
-   * @author Alberto Moreno Gonzalez
-   */
+   * @author Alberto Parra toval
+   * */
   public static boolean esPrimo(int numero) {
     int entreNumero= 0; //inicializamos la variable entreNumero
 
@@ -80,13 +80,13 @@ public class funciones_EX14 {
 
 
   /**
-   * La función devuelve el menor número primo que es mayor al número que
+   * La funci�n devuelve el menor número primo que es mayor al número que
    * se pasa como parámetro.
    *
    * @param numero número que se va a comprobar si es o no primo, y a partir del que se van a buscar nuevos primos
    * @return el primer número primo mayor que el número introducido
    * 
-   * @author Alberto Moreno Gonzalez
+   * @author Alberto Parra toval
    */
   public static int siguientePrimo(int numero) {
     //para esta función utilizaremos la variable es primo e iremos incrementando en 1 el número introducido hasta ver cual de los siguientes es primo
@@ -105,7 +105,7 @@ public class funciones_EX14 {
    * @param exponente exponente de la potencia
    * @return resultado de la potencia
    * 
-   * @author Alberto Moreno Gonzalez
+   * @author Alberto Parra toval
    */
   public static int potencia(int base, int exponente) {
     int resultado = 1; //definiremos el resultado inicialmente como 1 ya que si el número está elevado a 0 su resultado es 1
@@ -125,7 +125,7 @@ public class funciones_EX14 {
    * @param numeroDigitos variable que contará el número de dígitos 
    * @return número de digitos del número
    * 
-   * @author Alberto Moreno Gonzalez
+   * @author Alberto Parra toval
    */
   public static int digitos(long numero) {
     int numeroDigitos = 0;
@@ -149,7 +149,7 @@ public class funciones_EX14 {
    * @param posicion posicion de la que se quiere saber el número
    * @return dígito de la posición consultada
    * 
-   * @author Alberto Moreno Gonzalez
+   * @author Alberto Parra toval
    */
   public static int digitoN(long numero, int posicion) {
     //se voltea el número para operar sobre él. Así el primer resto de ese número entre 10 será la primera cifra del número introducido
@@ -181,7 +181,7 @@ public class funciones_EX14 {
    * @param digito digito del que se quiere saber la posición
    * @return primera posición del dígito consultado
    * 
-   * @author Alberto Moreno Gonzalez
+   * @author Alberto Parra toval
    */
   public static int posicionDeDigito(long numero, int digito) {
     //se voltea el número para operar sobre él. Así el primer resto de ese número entre 10 será la primera cifra del número introducido.
@@ -221,7 +221,7 @@ public class funciones_EX14 {
    * @param numDigitos número de dígitos pedido por pantalla 
    * @return primera posición del dígito consultado
    * 
-   * @author Alberto Moreno Gonzalez
+   * @author Alberto Parra toval
    */
   public static int quitaPorDetras(long numero, int numDigitos) {
     //para quitar cifras a un número por la derecha dividimos a ese número entre diez elevado al número de dígitos introducido
@@ -237,7 +237,7 @@ public class funciones_EX14 {
    * @param numDigitos número de dígitos pedido por pantalla 
    * @return dígito de la posición consultada
    * 
-   * @author Alberto Moreno Gonzalez
+   * @author Alberto Parra toval
    */
   public static int quitaPorDelante(long numero, int numDigitos) {
     int darLaVuelta = (funciones.funciones_EX14.voltea(numero)); //primero damos la vuelta el número introducido
@@ -257,7 +257,7 @@ public class funciones_EX14 {
    * @param digito dígito que se le va a añadir al número anterior por detrás
    * @return nuevo número formado por la unión del número y el dígito
    * 
-   * @author Alberto Moreno Gonzalez
+   * @author Alberto Parra toval
    */
   public static long pegaPorDetras(long numero, int digito) {
     return numero * 10 + digito; //el número introducido se multiplica por diez y se le suma el dígito
@@ -271,7 +271,7 @@ public class funciones_EX14 {
    * @param digito dígito que se le va a añadir al número anterior por delante
    * @return nuevo número formado por la unión del dígito y el número
    * 
-   * @author Alberto Moreno Gonzalez
+   * @author Alberto Parra toval
    */
   public static long pegaPorDelante(long numero, int digito) {
     //para cumplir su objetivo la función multiplicará el dígito por 10 elevado al número de dígitos del número introducido
@@ -295,7 +295,7 @@ public class funciones_EX14 {
    * @param posicionFinal posición final del trozo que se quiere mostrar pr pantalla
    * @return trozo del número introducido delimitado por las dos posiciones introducidas
    * 
-   * @author Alberto Moreno Gonzalez
+   * @author Alberto Parra toval
    */
   public static long trozoDeNumero(long numero, int posicionInicial, int posicionFinal) {
     long trozo = 0; //declramos la variable donde se guardará el trzo indicado
@@ -324,7 +324,7 @@ public class funciones_EX14 {
    * @param numero2 segundo número introducido sobre el que se va a calcular
    * @return nuevo número formado por la unión de numero1 y numero2
    * 
-   * @author Alberto Moreno Gonzalez
+   * @author Alberto Parra toval
    */
   public static long juntaNumeros(long numero1, long numero2) {
     //para juntar dos números utilizamos la función pegaPorDelante, cogiendo el segundo número introducido como el primero 
