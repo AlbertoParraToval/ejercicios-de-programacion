@@ -2,7 +2,7 @@ import funciones.funciones_EX14;
 /**
  * Realiza un programa que nos diga cuántos dígitos tiene un número introducido
  * por teclado. 
- * 
+ *  
  * @author Alberto Parra Toval
  */
 
