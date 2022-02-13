@@ -1,7 +1,7 @@
 import funciones.funciones_EX14;
 /**
- * Escribe un programa que diga si un nÃºmero introducido por teclado es o no
- * capicÃºa. Los nÃºmeros capicÃºa se leen igual hacia delante y hacia atrÃ¡s
+ * Escribe un programa que diga si un número introducido por teclado es o no
+ * capicúa. Los números capicúa se leen igual hacia delante y hacia atrás
  * 
  * @author Alberto Parra Toval
  */
