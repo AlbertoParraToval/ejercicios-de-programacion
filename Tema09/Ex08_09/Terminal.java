@@ -1,4 +1,5 @@
-class Terminal {
+package Ex08_09;
+public class Terminal {
 
     private String numero;
     private int tiempoDeConversacion; // tiempo de conversación en segundos
